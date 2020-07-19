@@ -1,0 +1,457 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:23:38] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:27:24] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:32:49] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:35:16] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:37:08] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:37:54] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:43:20] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:44:34] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:45:40] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:45:42] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:47:18] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:48:44] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:49:53] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:51:29] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:54:07] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 12:58:22] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:00:23] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:04:30] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:06:05] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:06:26] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:07:06] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:08:14] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:08:46] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:08:56] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:09:09] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:09:52] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 13:10:01] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 15:03:59] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 15:04:06] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 15:10:13] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 15:10:17] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 279-220-291
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 15:16:26] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 15:16:33] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Apr/2020 16:01:57] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:45:33] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:45:33] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:45:34] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:45:34] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:45:34] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:45:36] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:46:05] "POST /deploy HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:46:10] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:50:01] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:50:02] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:50:17] "POST /deploy HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:51:30] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:51:51] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:51:51] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:52:28] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:52:28] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:53:14] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:53:14] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:53:45] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:53:46] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:14] "GET /config HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:14] "GET /config?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:14] "GET /config?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:14] "GET /config?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:15] "GET /config?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:15] "GET /config?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:15] "GET /config?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:35] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:37] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:42] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:57:43] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:58:19] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:58:20] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:59:52] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 15:59:53] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:00:33] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:00:34] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:02:54] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:02:55] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:27:06] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:27:06] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:29:42] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:29:42] "GET /favicon.ico HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug: * Detected change in '/Users/omz/dev-workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 263-809-232
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:33:10] "GET /config HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:33:11] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2020 16:33:35] "POST /deploy HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:02:34] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:02:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:31:29] "[33mGET /config HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:32:32] "[33mGET /config HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/omz/workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:32:53] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:32:53] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:32:53] "[37mGET /static/js/jquery.min.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:32:53] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:32:53] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:33:05] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 18:34:14] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:22:09] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:22:09] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:22:10] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:22:10] "[37mGET /static/js/jquery.min.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:22:10] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:22:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:22:17] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:28:41] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:28:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:28:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:28:41] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 20:28:41] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:08:52] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:08:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:08:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:08:53] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:08:53] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:08:55] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:12:35] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:12:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:12:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:12:35] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:12:35] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:12:38] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:30:07] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:39:49] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:47:42] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:47:42] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:47:42] "[37mGET /static/js/jquery.min.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:47:42] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 21:47:42] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 22:41:35] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 22:41:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 22:41:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 22:41:35] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 22:41:35] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 22:41:39] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2020 22:45:37] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:18] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:18] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:18] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:18] "[37mGET /static/js/jquery.min.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:18] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:26] "[37mGET /basic-ip-addressing HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:26] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:26] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:53:32] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:55:50] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/omz/workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 20:57:37] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/omz/workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:00:09] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:00:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:00:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:00:09] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:00:09] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:00:14] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:05:31] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:05:31] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:05:31] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:05:31] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:05:31] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:05:42] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:08:25] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:08:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:08:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:08:25] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:08:25] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:08:28] "[37mGET /basic-ip-addressing HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:08:32] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:10:17] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:10:58] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:12:49] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:18:25] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:18:26] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:18:26] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:18:26] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:18:26] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:18:28] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:20:29] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:22:30] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 217-318-368
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:38:49] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:38:49] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:38:49] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:38:49] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:38:49] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 21:38:51] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 22:59:09] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 327-036-461
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:38:59] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 327-036-461
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:41:03] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:41:03] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:41:03] "[37mGET /static/js/jquery.min.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:41:03] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:41:03] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:41:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/omz/workspace/eveng-config-deploy/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 327-036-461
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:41:54] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:41:55] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:41:55] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:44:37] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:44:37] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 327-036-461
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:50:42] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:50:42] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:50:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:54:30] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:56:06] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:59:30] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 22:59:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 327-036-461
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 23:16:29] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 23:16:30] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 23:19:17] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Jul/2020 23:44:18] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 327-036-461
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2020 00:27:17] "[37mGET /config HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2020 00:27:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2020 00:27:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2020 00:27:17] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2020 00:27:17] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2020 00:27:28] "[37mGET /basic-ip-addressing HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2020 00:27:37] "[37mPOST /deploy HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 327-036-461
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2020 00:51:10] "[37mPOST /deploy HTTP/1.1[0m" 200 -
