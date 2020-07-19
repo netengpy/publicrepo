@@ -1,0 +1,38 @@
+ul0 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #1E90FF;
+            position: fixed;
+            top: 0;
+            width: 91%;
+        }
+
+        li0 {
+            float: left;
+        }
+        
+        li0 a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: 16px;
+        }
+        
+        li0 a:hover:not(.active) {
+            background-color: #87CEFA;
+            text-decoration: none;
+        }
+        
+        .active {
+            text-decoration: none;
+            background-color: #4169E1;
+        }
+
+        p0 {
+            font-family: "Lucida Console", Monaco, monospace;
+        }
