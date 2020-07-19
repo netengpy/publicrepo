@@ -1,3 +1,5 @@
+<b>Make sure you unzip the atc-iol-initialcfgs folder in the current folder<b>
+
 bootstrap-config.py === Bootstrap Initial Config using Telnet
 
 deploy-config.py === script called by Flask app to deploy the config
