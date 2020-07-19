@@ -1,4 +1,4 @@
-<b>Make sure you unzip the atc-iol-initialcfgs folder in the current folder<b>
+<b>Make sure you unzip the atc-iol-initialcfgs folder in the current folder</b>
 
 bootstrap-config.py === Bootstrap Initial Config using Telnet
 
