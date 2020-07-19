@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="expires" content="Sat, 01 Jan 2000 00:00:00 GMT" />
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <meta name="description" content="List INE CCIEv5 Config Files">
+        <meta name="author" content="Omer Chohan">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>List INE CCIEv5 Config Files</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+    </head>
+    <body style="background-color:honeydew;"><br>
+        <div class="container">
+            <div class="row">
+                <br>
+                    <div class="panel-group">
+                    <div class="panel panel-info">
+                    <div class="panel-heading"><font size="4">Deploy Config - INE CCIEv5 | Eve-NG</font></div>
+                    </div>                    
+                    <div class="panel panel-default">
+                    <div class="panel-body">
+
+                    <!-- {{ foldername }} -->
+
+                    <form name="deploy" role="form" action="deploy" method="POST">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Folders with R1 - R10 config files
+                                    <button type="submit" class="btn btn-success pull-right">Deploy</button></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                        {% block body %}
+                        <body>
+                        {% for file in files %}
+                        <tr>
+                        <td><input type="radio" name="foldername" value={{file}}></td>
+                          <td> <a href="{{ file }}">{{ file }}</a></td>
+                        </tr>
+                        {% endfor %}
+                        </body>
+                        {% endblock %}
+                            </tbody>
+                        </table>
+                        <br>
+                    </form>
+                    </div> <!-- panel-body --> 
+                    </div> <!-- panel-default -->
+                    </div> <!-- panel-group -->
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </body>
+</html>
