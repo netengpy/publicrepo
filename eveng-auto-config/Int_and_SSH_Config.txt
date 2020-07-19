@@ -1,0 +1,23 @@
+no service config
+no pnp pro pnp_profile
+!
+int e0/0
+ip add dhcp 
+!
+cry key zero
+yes
+!
+username cisco privilege 15 password cisco
+!
+ip domain-name mystacktrace.com
+!
+crypto key generate rsa 
+1024
+!
+line vty 0 4
+privilege level 15
+login local
+transport input telnet ssh
+!
+end
+wr me
