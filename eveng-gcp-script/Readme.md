@@ -1,4 +1,4 @@
-# Eve-NG-in-Google-Cloud :cloud:
+# :cloud: Eve-NG in Google Cloud :cloud:
 Install Eve-NG in Google Cloud
 
 #### Create a Googe Cloud account which will give you $300US free credit
