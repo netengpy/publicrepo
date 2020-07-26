@@ -17,7 +17,7 @@ Click `Activate Cloud Shell` (top right toolbar)
 
 Paste the below into the cloud shell terminal: 
 
-```gcloud compute images create nested-virt-ubuntu --source-image-project=ubuntu-os-cloud --source-image-family=ubuntu-1604-lts --licenses="https://www.google.com/compute/v1/projects/vm-options/global/licenses/enable-vmx”```
+```gcloud compute images create nested-ubuntu-xenial --source-image-family=ubuntu-1604-lts --source-image-project=ubuntu-os-cloud --licenses=https://www.googleapis.com/compute/v1/projects/vm-options/global/licenses/enable-vmx```
 
 Say `yes` if asked to enable API on project
 
