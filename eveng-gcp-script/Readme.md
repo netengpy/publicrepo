@@ -60,7 +60,7 @@ sudo -i
 Go the folder with shell script and execute: 
 bash eveng-init-setup.sh <bucket-name> 
 ```
-You could also make the script executeable - chmod +x eveng-init-setup.sh and run as ./eveng-init-setup.sh <bucket-name>
+You could also make the script executeable - `chmod +x eveng-init-setup.sh` and run as `./eveng-init-setup.sh <bucket-name>`
 * Fix the permissions using the below command: 
 `/opt/unetlab/wrappers/unl_wrapper -a fixpermissions`
 
