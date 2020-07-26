@@ -41,11 +41,12 @@ Zone = `Choose location closest or cheaper for you`
 * Click Done
 * Click Create
 
-* Create Firewall rules
-Step 1: Navigation menu/VPC Network/Firewall rules
-Step 2: Create new firewall rule
-Step 3: Create an ingress FW rule; allow TCP ports 0-65335
-Step 4: Create an egress FW rule; allow TCP ports 0-65535
+#### Create Firewall rules
+- Step 1: Navigation menu/VPC Network/Firewall rules
+- Step 2: Create new firewall rule
+- Step 3: Create an ingress FW rule; allow TCP ports 0-65335
+- Step 4: Create an egress FW rule; allow TCP ports 0-65535
+
 
 * Create a GCP bucket and upload the IOL images and script to generate the license key
 * Important note - name the bucket whatever you want BUT the folder containing the images must be named 'images'. Else the eveng-init-setup.sh script will fail. Modify the paths in script if needed.
