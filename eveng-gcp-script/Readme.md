@@ -4,7 +4,7 @@ Install Eve-NG in Google Cloud
 #### Create a Googe Cloud account which will give you $300US free credit
 https://cloud.google.com/
 
-* Log in
+* Log in to GCP
 * Click `Go To Console`
 * Click `Select a project`
 * Click `New Project`
@@ -44,8 +44,8 @@ Zone = `Choose location closest or cheaper for you`
 * Create Firewall rules
 Step 1: Navigation menu/VPC Network/Firewall rules
 Step 2: Create new firewall rule
-Step 3: Create an ingress FW rule; allow TCP ports c
-Step 4: Create an egress FW rule; allow TCP ports 0-6553
+Step 3: Create an ingress FW rule; allow TCP ports 0-65335
+Step 4: Create an egress FW rule; allow TCP ports 0-65535
 
 * Create a GCP bucket and upload the IOL images and script to generate the license key
 * Important note - name the bucket whatever you want BUT the folder containing the images must be named 'images'. Else the eveng-init-setup.sh script will fail. Modify the paths in script if needed.
@@ -56,13 +56,12 @@ Step 4: Create an egress FW rule; allow TCP ports 0-6553
 ```
 sudo -i
 * git clone or copy the shell script to eve-ng 
-Go the folder with shell script and execute: bash eveng-init-setup.sh <bucket-name> 
-
-
+Go the folder with shell script and execute: 
+bash eveng-init-setup.sh <bucket-name> 
+```
+You could also make the script executeable - chmod +x eveng-init-setup.sh and run as ./eveng-init-setup.sh <bucket-name>
 * Fix the permissions using the below command: 
 `/opt/unetlab/wrappers/unl_wrapper -a fixpermissions`
 
-* Browse to the web GUI 
-[http://35.211.142.236](http://35.211.142.236)
+* Browse to the web GUI with your instance's public IP address
 
-**EOF**
