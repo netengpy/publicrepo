@@ -53,7 +53,9 @@ Zone = `Choose location closest or cheaper for you`
 
 * Navigate back to `Compute Engine > VM Instances`
 * Click on `SSH` 
-
+* Install Eve-NG `wget -O - http://www.eve-ng.net/repo/install-eve.sh | bash -i`
+> After install completes, reboot the VM. Reconnect - ctrl+c and enter sudo -i
+> Set root password, hostname, DHCP, Internet connection direct.
 ```
 sudo -i
 * git clone or copy the shell script to eve-ng 
