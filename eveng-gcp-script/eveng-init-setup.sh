@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Put IOL images and key gen script in bucket folder named "iol-images"
+# Put IOL images and key gen script in bucket folder named "images"
 # Otherwise amend the lines 23-29 accordingly 
 # Script assumes <bucket-name>/images/ path for files needed for IOL 
 # ./eveng-init-setup <bucket-name>
@@ -23,8 +23,8 @@ echo "------------------------------------------------------"
 gsutil cp -r gs://$1/* /tmp/
    
 cd /opt/unetlab/addons/iol/bin/
-mv /tmp/iol-images/* .
-rm -rf /tmp/iol-images
+mv /tmp/images/* .
+rm -rf /tmp/images
    
 key=$(python CiscoKeyGen.py 2>&1)
    
