@@ -1,13 +1,14 @@
 SDWAN v19.2.2
 ![Topology](https://github.com/netengpy/publicrepo/blob/master/SDWAN/v19-2-2/sdwan-Topology.png)
 ![Eve-ng](https://github.com/netengpy/publicrepo/blob/master/SDWAN/v19-2-2/sdwan-EveNG-Topology.png)
+
 # Configure OOB, WAN, INTERNET and MPLS
-# Config in Underlay_CLI_Configs folder
+# Config files are in Underlay_CLI_Configs folder
 
 
 # VPN ID 0 - Transport VPN (VPN 0)
 # VPN ID 512 - Management VPN (VPN 512) for out-of-band management traffic
-=======
+
 vManage
 =======
 ```
@@ -55,8 +56,6 @@ commit
 ```
 ********
 
-
-======
 vBond
 ======
 ```
@@ -87,7 +86,7 @@ ip route 0.0.0.0/0 10.1.1.254
 !
 commit and-quit
 ```
-======
+
 vSmart
 ======
 ```
@@ -116,7 +115,7 @@ ip route 0.0.0.0/0 10.1.1.254
 !
 commit and-quit
 ```
-=======
+
 Site-300-vEdge01
 =======
 ```
@@ -136,13 +135,13 @@ ip route 0.0.0.0/0 200.200.100.17
 !
 commit and-quit
 ```
-=======
-Site-400-vEdge02
+
+Site-400-vEdge01
 =======
 ```
 conf t
 system
-host-name Site-400-vEdge02
+host-name Site-400-vEdge01
 system-ip 4.1.1.1
 site-id 400
 organization-name mystacktracecom
@@ -157,8 +156,15 @@ ip route 0.0.0.0/0 200.200.100.13
 commit and-quit
 ```
 
-========= INSTALL CERTIFICATES =========
-openssl rand -out /home/eve/.rnd -hex 256
+Recommendation
+==============
+# Use the `sdwan-bootstrap.sh` script in the scripts folder to automate some of the steps below
+
+INSTALL CERTIFICATES
+====================
+If you get RND error while generating the certificate. Replace /home/eve with correct path and username.
+
+`openssl rand -out /home/eve/.rnd -hex 256`
 
 
 A CSR Certificate Signing Request file is a file created as a signing request for a digital certificate. It contains an
@@ -197,12 +203,11 @@ vmanage# request root-cert-chain install /home/admin/root-ca.crt
 
 `show certificate root-ca-cert`
 
-===========
+
 vManage GUI
 ===========
 Configuration → Certificates → Controllers → vManage → Click on 3 bars → Generate CSR
 
-====================
 Go to vManage vshell
 ====================
 ```
@@ -225,8 +230,6 @@ Change Controller Certificate Authorization to Enterprise Root certificate and i
 
 Navigate to Configuration > Certificates and then select Controllers in top left. In the right side for each device press on the three dots button to access Generate CSR option. Copy and paste the content in new file for each node, save files in /root directory as vManage, vBond_csr and vSmart_csr.
 
-
-======
 vBond
 ======
 1. Install root-ca.crt from vManage that was created earlier
@@ -263,7 +266,6 @@ Commit complete.
 vBond(config-interface-ge0/0)#
 ```
 
-====================
 Go to vManage vshell
 ====================
 ```
@@ -278,7 +280,6 @@ Configuration → Certificates → Controllers → Install Certificate → Paste
 + Send certificate to vBond
 Configuration → Certificates → Controllers → Send to vBond
 
-======
 vSmart
 ======
 1. Install root-ca.crt from vManage that was created earlier
@@ -300,7 +301,7 @@ Password: admin
 Protocol: DTLS
 Generate CSR: Check
 ```
-====================
+
 Go to vManage vshell
 ====================
 ```
@@ -313,11 +314,9 @@ Configuration → Certificates → Controllers → Install Certificate → Paste
 + Send certificate to vBond
 Configuration → Certificates → Controllers → Send to vBond
 
-
-================================================
 Get device list from Cisco using the Smart Account
 Upload device list to vManage
-================================================
+=============================
 Configuration → Devices → vEdge List → Upload vEdge
 
 + Validate vEdges
@@ -326,7 +325,6 @@ Configuration → Certificates → vEdge List → (vEdge) → Valid
 + Send vedge list to controller
 Configuration → Certificates → vEdge List → Send to Controllers
 
-======
 vEdge
 ======
 1. Copy and Install root-ca.crt from vManage that was created earlier
@@ -344,11 +342,13 @@ paste root-ca.crt from vManage
 
 `vedge# request vedge-cloud activate chassis <UUID> token <OTP>`
 
+```
 show certificate root-ca-cert
 show control local-properties
+```
 
-========================
 Final Task - Config tunnel
+========================
 Go to vManage and vSmart
 ========================
 ```
@@ -356,7 +356,7 @@ vpn 0
 interface eth1
 tunnel-interface
 ```
-======
+
 vBond
 ======
 ```
@@ -365,10 +365,12 @@ interface ge0/0
 tunnel-interface encapsulation ipsec
 ```
 
+Helpful Commands
 ========================
+```
 show certificate root-ca-cert
 show control connections
 show control connections-history
 show control local-properties
-
+```
 
