@@ -1,0 +1,166 @@
+{
+  "header": {
+    "generatedOn": 1598027105126,
+    "columns": [
+      {
+        "property": "csv-status",
+        "title": "Status",
+        "toolTip": "Input status",
+        "hideable": false,
+        "dataType": "string",
+        "editable": false,
+        "isDisplay": true,
+        "isLeftPinned": true,
+        "minWidth": 30,
+        "width": 30,
+        "display": "icon",
+        "iconProperty": "csv-status",
+        "icon": [
+          {
+            "key": "complete",
+            "value": "images/template_complete.png"
+          },
+          {
+            "key": "in_complete",
+            "value": "images/template_in_complete.png"
+          }
+        ]
+      },
+      {
+        "property": "csv-deviceId",
+        "title": "Chassis Number",
+        "toolTip": "UUID: csv-deviceId",
+        "hideable": false,
+        "dataType": "string",
+        "editable": false,
+        "isDisplay": true,
+        "isLeftPinned": true,
+        "objectType": "object",
+        "templateType": "None",
+        "values": false,
+        "optional": false,
+        "width": 280
+      },
+      {
+        "property": "csv-deviceIP",
+        "title": "System IP",
+        "toolTip": "Device IP: csv-deviceIP",
+        "hideable": false,
+        "dataType": "string",
+        "editable": false,
+        "isDisplay": true,
+        "isLeftPinned": true,
+        "objectType": "object",
+        "templateType": "None",
+        "values": false,
+        "optional": false,
+        "width": 100
+      },
+      {
+        "property": "csv-host-name",
+        "title": "Hostname",
+        "toolTip": "Host name: csv-host-name",
+        "hideable": false,
+        "dataType": "string",
+        "editable": false,
+        "isDisplay": true,
+        "isLeftPinned": true,
+        "objectType": "object",
+        "templateType": "None",
+        "values": false,
+        "optional": false,
+        "width": 180
+      },
+      {
+        "property": "/0/vpn-instance/ip/route/0.0.0.0/0/next-hop/vpn_0_next_hop_ip_address/address",
+        "title": "Address(vpn_0_next_hop_ip_address)",
+        "toolTip": "IP Address: /0/vpn-instance/ip/route/0.0.0.0/0/next-hop/vpn_0_next_hop_ip_address/address",
+        "hideable": false,
+        "dataType": "ipv4",
+        "editable": true,
+        "isDisplay": true,
+        "isLeftPinned": false,
+        "objectType": "object",
+        "templateType": "vpn-vsmart",
+        "values": false,
+        "optional": false,
+        "width": 100
+      },
+      {
+        "property": "/0/eth1/interface/ip/address",
+        "title": "IPv4 Address(vpn_0_if_ip_address)",
+        "toolTip": "Assign IPv4 address: /0/eth1/interface/ip/address",
+        "hideable": false,
+        "dataType": "ipv4-prefix",
+        "editable": true,
+        "isDisplay": true,
+        "isLeftPinned": false,
+        "objectType": "object",
+        "templateType": "vpn-vsmart-interface",
+        "values": false,
+        "optional": false,
+        "width": 100
+      },
+      {
+        "property": "//system/host-name",
+        "title": "Hostname(system_host_name)",
+        "toolTip": "Set the hostname: //system/host-name",
+        "hideable": false,
+        "dataType": "string",
+        "editable": true,
+        "isDisplay": true,
+        "isLeftPinned": false,
+        "objectType": "object",
+        "templateType": "system-vsmart",
+        "values": false,
+        "optional": false,
+        "width": 100
+      },
+      {
+        "property": "//system/system-ip",
+        "title": "System IP(system_system_ip)",
+        "toolTip": "Set the system IP address: //system/system-ip",
+        "hideable": false,
+        "dataType": "string",
+        "editable": true,
+        "isDisplay": true,
+        "isLeftPinned": false,
+        "objectType": "object",
+        "templateType": "system-vsmart",
+        "values": false,
+        "optional": false,
+        "width": 100
+      },
+      {
+        "property": "//system/site-id",
+        "title": "Site ID(system_site_id)",
+        "toolTip": "Set the site ID: //system/site-id",
+        "hideable": false,
+        "dataType": "number",
+        "editable": true,
+        "isDisplay": true,
+        "isLeftPinned": false,
+        "objectType": "object",
+        "templateType": "system-vsmart",
+        "values": false,
+        "optional": false,
+        "width": 100
+      }
+    ],
+    "templateVariableCount": 5,
+    "fields": {}
+  },
+  "data": [
+    {
+      "csv-status": "complete",
+      "csv-deviceId": "70778997-4bc2-46c1-b06f-a7b6771de056",
+      "csv-deviceIP": "1.1.1.3",
+      "csv-host-name": "vSmart-1",
+      "/0/vpn-instance/ip/route/0.0.0.0/0/next-hop/vpn_0_next_hop_ip_address/address": "10.1.1.254",
+      "/0/eth1/interface/ip/address": "10.1.1.3/24",
+      "//system/host-name": "vSmart-1",
+      "//system/system-ip": "1.1.1.3",
+      "//system/site-id": "1000"
+    }
+  ]
+}

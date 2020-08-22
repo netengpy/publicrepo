@@ -1,0 +1,363 @@
+    {
+   "templateType" : "aaa",
+   "templateDefinition" : {
+      "radius" : {
+         "retransmit" : {
+            "vipVariableName" : "retransmit",
+            "vipValue" : 3,
+            "vipType" : "ignore",
+            "vipObjectType" : "object"
+         },
+         "timeout" : {
+            "vipVariableName" : "radius_timeout",
+            "vipValue" : 5,
+            "vipType" : "ignore",
+            "vipObjectType" : "object"
+         }
+      },
+      "tacacs" : {
+         "authentication" : {
+            "vipObjectType" : "object",
+            "vipType" : "ignore",
+            "vipValue" : "pap",
+            "vipVariableName" : "tacacs_authentication"
+         },
+         "timeout" : {
+            "vipObjectType" : "object",
+            "vipType" : "ignore",
+            "vipValue" : 5,
+            "vipVariableName" : "tacacs_timeout"
+         }
+      },
+      "aaa" : {
+         "user" : {
+            "vipPrimaryKey" : [
+               "name"
+            ],
+            "vipObjectType" : "tree",
+            "vipType" : "constant",
+            "vipValue" : [
+               {
+                  "vipOptional" : false,
+                  "group" : {
+                     "vipValue" : [],
+                     "vipType" : "constant",
+                     "vipObjectType" : "list"
+                  },
+                  "priority-order" : [
+                     "name",
+                     "password",
+                     "secret",
+                     "description",
+                     "group"
+                  ],
+                  "name" : {
+                     "vipObjectType" : "object",
+                     "vipVariableName" : "user_name_0",
+                     "vipType" : "constant",
+                     "vipValue" : "admin"
+                  },
+                  "password" : {
+                     "vipObjectType" : "object",
+                     "vipValue" : "$6$smKFGQ==$dXAo43/XDQPJfVB1Gy.1RHrpaueNJKByQuRT/82zBj1eFQNZg1UpNAWRyzltyssDeIO/lR.rX6ATLFDVKY9jB/",
+                     "vipType" : "constant"
+                  },
+                  "description" : {
+                     "vipObjectType" : "object",
+                     "vipType" : "ignore",
+                     "vipValue" : ""
+                  }
+               }
+            ]
+         },
+         "auth-order" : {
+            "vipType" : "constant",
+            "vipValue" : [
+               {
+                  "vipValue" : "local",
+                  "vipType" : "constant",
+                  "vipObjectType" : "object"
+               },
+               {
+                  "vipType" : "constant",
+                  "vipValue" : "radius",
+                  "vipObjectType" : "object"
+               },
+               {
+                  "vipValue" : "tacacs",
+                  "vipType" : "constant",
+                  "vipObjectType" : "object"
+               }
+            ],
+            "vipVariableName" : "auth_order",
+            "vipObjectType" : "list"
+         },
+         "usergroup" : {
+            "vipType" : "constant",
+            "vipValue" : [
+               {
+                  "viewMode" : "view",
+                  "priority-order" : [
+                     "name"
+                  ],
+                  "name" : {
+                     "vipObjectType" : "object",
+                     "vipType" : "constant",
+                     "vipValue" : "netadmin"
+                  }
+               },
+               {
+                  "priority-order" : [
+                     "name",
+                     "task"
+                  ],
+                  "name" : {
+                     "vipType" : "constant",
+                     "vipValue" : "basic",
+                     "vipObjectType" : "object"
+                  },
+                  "task" : {
+                     "vipObjectType" : "tree",
+                     "vipPrimaryKey" : [
+                        "mode"
+                     ],
+                     "vipType" : "constant",
+                     "vipValue" : [
+                        {
+                           "priority-order" : [
+                              "mode",
+                              "permission"
+                           ],
+                           "permission" : {
+                              "vipObjectType" : "list",
+                              "vipType" : "constant",
+                              "vipValue" : [
+                                 {
+                                    "vipValue" : "read",
+                                    "vipType" : "constant",
+                                    "vipObjectType" : "object"
+                                 },
+                                 {
+                                    "vipObjectType" : "object",
+                                    "vipType" : "constant",
+                                    "vipValue" : "write"
+                                 }
+                              ]
+                           },
+                           "mode" : {
+                              "vipObjectType" : "object",
+                              "vipValue" : "system",
+                              "vipType" : "constant"
+                           }
+                        },
+                        {
+                           "mode" : {
+                              "vipValue" : "interface",
+                              "vipType" : "constant",
+                              "vipObjectType" : "object"
+                           },
+                           "permission" : {
+                              "vipType" : "constant",
+                              "vipValue" : [
+                                 {
+                                    "vipObjectType" : "object",
+                                    "vipType" : "constant",
+                                    "vipValue" : "read"
+                                 },
+                                 {
+                                    "vipObjectType" : "object",
+                                    "vipValue" : "write",
+                                    "vipType" : "constant"
+                                 }
+                              ],
+                              "vipObjectType" : "list"
+                           },
+                           "priority-order" : [
+                              "mode",
+                              "permission"
+                           ]
+                        }
+                     ]
+                  }
+               },
+               {
+                  "task" : {
+                     "vipValue" : [
+                        {
+                           "priority-order" : [
+                              "mode",
+                              "permission"
+                           ],
+                           "mode" : {
+                              "vipValue" : "system",
+                              "vipType" : "constant",
+                              "vipObjectType" : "object"
+                           },
+                           "permission" : {
+                              "vipValue" : [
+                                 {
+                                    "vipObjectType" : "object",
+                                    "vipType" : "constant",
+                                    "vipValue" : "read"
+                                 }
+                              ],
+                              "vipType" : "constant",
+                              "vipObjectType" : "list"
+                           }
+                        },
+                        {
+                           "permission" : {
+                              "vipValue" : [
+                                 {
+                                    "vipType" : "constant",
+                                    "vipValue" : "read",
+                                    "vipObjectType" : "object"
+                                 }
+                              ],
+                              "vipType" : "constant",
+                              "vipObjectType" : "list"
+                           },
+                           "mode" : {
+                              "vipValue" : "interface",
+                              "vipType" : "constant",
+                              "vipObjectType" : "object"
+                           },
+                           "priority-order" : [
+                              "mode",
+                              "permission"
+                           ]
+                        },
+                        {
+                           "priority-order" : [
+                              "mode",
+                              "permission"
+                           ],
+                           "permission" : {
+                              "vipObjectType" : "list",
+                              "vipValue" : [
+                                 {
+                                    "vipObjectType" : "object",
+                                    "vipType" : "constant",
+                                    "vipValue" : "read"
+                                 }
+                              ],
+                              "vipType" : "constant"
+                           },
+                           "mode" : {
+                              "vipValue" : "policy",
+                              "vipType" : "constant",
+                              "vipObjectType" : "object"
+                           }
+                        },
+                        {
+                           "priority-order" : [
+                              "mode",
+                              "permission"
+                           ],
+                           "permission" : {
+                              "vipValue" : [
+                                 {
+                                    "vipObjectType" : "object",
+                                    "vipType" : "constant",
+                                    "vipValue" : "read"
+                                 }
+                              ],
+                              "vipType" : "constant",
+                              "vipObjectType" : "list"
+                           },
+                           "mode" : {
+                              "vipValue" : "routing",
+                              "vipType" : "constant",
+                              "vipObjectType" : "object"
+                           }
+                        },
+                        {
+                           "priority-order" : [
+                              "mode",
+                              "permission"
+                           ],
+                           "mode" : {
+                              "vipObjectType" : "object",
+                              "vipType" : "constant",
+                              "vipValue" : "security"
+                           },
+                           "permission" : {
+                              "vipObjectType" : "list",
+                              "vipValue" : [
+                                 {
+                                    "vipObjectType" : "object",
+                                    "vipType" : "constant",
+                                    "vipValue" : "read"
+                                 }
+                              ],
+                              "vipType" : "constant"
+                           }
+                        }
+                     ],
+                     "vipType" : "constant",
+                     "vipObjectType" : "tree",
+                     "vipPrimaryKey" : [
+                        "mode"
+                     ]
+                  },
+                  "name" : {
+                     "vipObjectType" : "object",
+                     "vipType" : "constant",
+                     "vipValue" : "operator"
+                  },
+                  "priority-order" : [
+                     "name",
+                     "task"
+                  ]
+               }
+            ],
+            "vipPrimaryKey" : [
+               "name"
+            ],
+            "vipObjectType" : "tree"
+         },
+         "logs" : {
+            "netconf-disable" : {
+               "vipValue" : "false",
+               "vipType" : "ignore",
+               "vipVariableName" : "disable_netconf_logs",
+               "vipObjectType" : "object"
+            },
+            "audit-disable" : {
+               "vipObjectType" : "object",
+               "vipValue" : "false",
+               "vipType" : "ignore",
+               "vipVariableName" : "disable_audit_logs"
+            }
+         },
+         "radius-servers" : {
+            "vipType" : "ignore",
+            "vipValue" : [
+               ""
+            ],
+            "vipVariableName" : "radius_servers",
+            "vipObjectType" : "list"
+         },
+         "admin-auth-order" : {
+            "vipValue" : "false",
+            "vipType" : "ignore",
+            "vipVariableName" : "admin_auth_order",
+            "vipObjectType" : "object"
+         },
+         "auth-fallback" : {
+            "vipObjectType" : "object",
+            "vipVariableName" : "auth_fallback",
+            "vipValue" : "false",
+            "vipType" : "ignore"
+         }
+      }
+   },
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateMinVersion" : "15.0.0",
+   "templateName" : "AAA",
+   "configType" : "xml",
+   "templateDescription" : "AAA",
+   "factoryDefault" : false
+}

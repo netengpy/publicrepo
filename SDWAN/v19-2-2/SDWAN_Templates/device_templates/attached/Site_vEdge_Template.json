@@ -1,0 +1,38 @@
+[
+  {
+    "host-name": "Site-300-vEdge-01",
+    "deviceIP": "3.1.1.1",
+    "local-system-ip": "3.1.1.1",
+    "site-id": "300",
+    "device-groups": [
+      "No groups"
+    ],
+    "uuid": "72174714-9da3-d5ce-ece9-e421fd93ee9a",
+    "personality": "vedge",
+    "configCloudxMode": "none"
+  },
+  {
+    "host-name": "Site-500-vEdge-01",
+    "deviceIP": "5.1.1.1",
+    "local-system-ip": "5.1.1.1",
+    "site-id": "500",
+    "device-groups": [
+      "No groups"
+    ],
+    "uuid": "07df7bb1-5514-af37-9168-39b169bfc65f",
+    "personality": "vedge",
+    "configCloudxMode": "none"
+  },
+  {
+    "host-name": "Site-400-vEdge-01",
+    "deviceIP": "4.1.1.1",
+    "local-system-ip": "4.1.1.1",
+    "site-id": "400",
+    "device-groups": [
+      "No groups"
+    ],
+    "uuid": "cc3319a6-92bc-3b0f-d822-c0b037d4384c",
+    "personality": "vedge",
+    "configCloudxMode": "none"
+  }
+]

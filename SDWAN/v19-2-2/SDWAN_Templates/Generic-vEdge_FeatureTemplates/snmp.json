@@ -1,0 +1,54 @@
+{
+   "templateName" : "SNMP",
+   "templateType" : "snmp",
+   "configType" : "xml",
+   "factoryDefault" : false,
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateMinVersion" : "15.0.0",
+   "templateDescription" : "SNMP",
+   "templateDefinition" : {
+      "shutdown" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "object",
+         "vipVariableName" : "snmp_shutdown",
+         "vipValue" : "true"
+      },
+      "name" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "object",
+         "vipVariableName" : "snmp_device_name"
+      },
+      "location" : {
+         "vipVariableName" : "snmp_device_location",
+         "vipObjectType" : "object",
+         "vipType" : "ignore"
+      },
+      "trap" : {
+         "group" : {
+            "vipPrimaryKey" : [
+               "group-name"
+            ],
+            "vipValue" : [],
+            "vipType" : "ignore",
+            "vipObjectType" : "tree"
+         },
+         "target" : {
+            "vipObjectType" : "tree",
+            "vipType" : "ignore",
+            "vipPrimaryKey" : [
+               "vpn-id",
+               "ip",
+               "port"
+            ],
+            "vipValue" : []
+         }
+      },
+      "contact" : {
+         "vipObjectType" : "object",
+         "vipType" : "ignore",
+         "vipVariableName" : "snmp_contact"
+      }
+   }
+}

@@ -1,0 +1,156 @@
+{
+   "templateDescription" : "Branch VPN 0 Template",
+   "templateMinVersion" : "15.0.0",
+   "templateDefinition" : {
+      "ip" : {
+         "ipsec-route" : {},
+         "route" : {
+            "vipValue" : [
+               {
+                  "priority-order" : [
+                     "prefix",
+                     "next-hop"
+                  ],
+                  "prefix" : {
+                     "vipType" : "constant",
+                     "vipObjectType" : "object",
+                     "vipValue" : "0.0.0.0/0",
+                     "vipVariableName" : "vpn_ipv4_ip_prefix"
+                  },
+                  "next-hop" : {
+                     "vipPrimaryKey" : [
+                        "address"
+                     ],
+                     "vipValue" : [
+                        {
+                           "distance" : {
+                              "vipValue" : 1,
+                              "vipVariableName" : "vpn_next_hop_ip_distance_0",
+                              "vipObjectType" : "object",
+                              "vipType" : "ignore"
+                           },
+                           "address" : {
+                              "vipVariableName" : "vpn_next_hop_ip_address_0",
+                              "vipValue" : "10.102.101.254",
+                              "vipType" : "constant",
+                              "vipObjectType" : "object"
+                           },
+                           "priority-order" : [
+                              "address",
+                              "distance"
+                           ]
+                        },
+                        {
+                           "priority-order" : [
+                              "address",
+                              "distance"
+                           ],
+                           "address" : {
+                              "vipObjectType" : "object",
+                              "vipType" : "constant",
+                              "vipVariableName" : "vpn_next_hop_ip_address_1",
+                              "vipValue" : "172.16.201.254"
+                           },
+                           "distance" : {
+                              "vipValue" : 1,
+                              "vipVariableName" : "vpn_next_hop_ip_distance_1",
+                              "vipType" : "ignore",
+                              "vipObjectType" : "object"
+                           }
+                        }
+                     ],
+                     "vipObjectType" : "tree",
+                     "vipType" : "constant"
+                  }
+               }
+            ],
+            "vipPrimaryKey" : [
+               "prefix"
+            ],
+            "vipType" : "constant",
+            "vipObjectType" : "tree"
+         },
+         "gre-route" : {}
+      },
+      "vpn-id" : {
+         "vipValue" : 0,
+         "vipObjectType" : "object",
+         "vipType" : "constant"
+      },
+      "tcp-optimization" : {
+         "vipVariableName" : "vpn_tcp_optimization",
+         "vipValue" : "false",
+         "vipObjectType" : "node-only",
+         "vipType" : "ignore"
+      },
+      "host" : {
+         "vipPrimaryKey" : [
+            "hostname"
+         ],
+         "vipValue" : [
+            {
+               "hostname" : {
+                  "vipObjectType" : "object",
+                  "vipType" : "constant",
+                  "vipVariableName" : "vpn_host_hostname",
+                  "vipValue" : "vbond.cisco.com"
+               },
+               "ip" : {
+                  "vipVariableName" : "vpn_host_ip",
+                  "vipValue" : [
+                     "10.102.101.4"
+                  ],
+                  "vipType" : "constant",
+                  "vipObjectType" : "list"
+               },
+               "priority-order" : [
+                  "hostname",
+                  "ip"
+               ]
+            }
+         ],
+         "vipObjectType" : "tree",
+         "vipType" : "constant"
+      },
+      "ecmp-hash-key" : {
+         "layer4" : {
+            "vipType" : "ignore",
+            "vipObjectType" : "object",
+            "vipValue" : "false",
+            "vipVariableName" : "vpn_layer4"
+         }
+      },
+      "service" : {
+         "vipObjectType" : "tree",
+         "vipType" : "ignore",
+         "vipPrimaryKey" : [
+            "svc-type"
+         ],
+         "vipValue" : []
+      },
+      "omp" : {
+         "advertise" : {
+            "vipPrimaryKey" : [
+               "protocol"
+            ],
+            "vipValue" : [],
+            "vipObjectType" : "tree",
+            "vipType" : "ignore"
+         }
+      },
+      "ipv6" : {},
+      "name" : {
+         "vipVariableName" : "vpn_name",
+         "vipType" : "ignore",
+         "vipObjectType" : "object"
+      }
+   },
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateType" : "vpn-vedge",
+   "factoryDefault" : false,
+   "templateName" : "Branch_VPN0_Template",
+   "feature" : "vmanage-default",
+   "configType" : "xml"
+}

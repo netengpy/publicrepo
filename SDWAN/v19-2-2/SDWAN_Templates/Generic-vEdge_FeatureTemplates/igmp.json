@@ -1,0 +1,62 @@
+{
+   "templateName" : "IGMP",
+   "templateDescription" : "IGMP",
+   "templateType" : "igmp",
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateDefinition" : {
+      "igmp" : {
+         "shutdown" : {
+            "vipType" : "ignore",
+            "vipObjectType" : "object",
+            "vipVariableName" : "igmp_shutdown",
+            "vipValue" : "false"
+         },
+         "interface" : {
+            "vipType" : "constant",
+            "vipObjectType" : "tree",
+            "vipPrimaryKey" : [
+               "name"
+            ],
+            "vipValue" : [
+               {
+                  "priority-order" : [
+                     "name",
+                     "join-group"
+                  ],
+                  "join-group" : {
+                     "vipPrimaryKey" : [
+                        "group-address"
+                     ],
+                     "vipObjectType" : "tree",
+                     "vipType" : "constant",
+                     "vipValue" : [
+                        {
+                           "group-address" : {
+                              "vipType" : "variableName",
+                              "vipObjectType" : "object",
+                              "vipVariableName" : "igmp_interface_group_address_0",
+                              "vipValue" : ""
+                           },
+                           "priority-order" : [
+                              "group-address"
+                           ]
+                        }
+                     ]
+                  },
+                  "name" : {
+                     "vipValue" : "",
+                     "vipObjectType" : "object",
+                     "vipVariableName" : "igmp_interface_name_details",
+                     "vipType" : "variableName"
+                  }
+               }
+            ]
+         }
+      }
+   },
+   "configType" : "xml",
+   "factoryDefault" : false,
+   "templateMinVersion" : "15.0.0"
+}

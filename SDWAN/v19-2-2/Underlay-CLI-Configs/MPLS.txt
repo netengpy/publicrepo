@@ -1,0 +1,30 @@
+!MPLS
+!
+conf t
+!
+hostname MPLS
+!
+interface Ethernet0/0
+ ip address 172.16.1.17 255.255.255.252
+ no shut
+!
+interface Ethernet0/1
+ ip address 172.16.1.13 255.255.255.252
+ no shut
+!
+interface Ethernet0/2
+ ip address 172.16.1.5 255.255.255.252
+ no shut
+!
+interface Ethernet0/3
+ ip address 172.16.1.9 255.255.255.252
+ no shut
+!
+interface Ethernet1/0
+ ip address 172.16.1.1 255.255.255.252
+ no shut
+!
+ip route 10.1.1.0 255.255.255.0 172.16.1.2
+!
+end
+wr

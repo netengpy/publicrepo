@@ -1,0 +1,73 @@
+{
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "configType" : "xml",
+   "templateName" : "PIM",
+   "templateDescription" : "PIM",
+   "templateMinVersion" : "15.0.0",
+   "templateType" : "pim",
+   "factoryDefault" : false,
+   "templateDefinition" : {
+      "pim" : {
+         "interface" : {
+            "vipPrimaryKey" : [
+               "name"
+            ],
+            "vipValue" : [
+               {
+                  "name" : {
+                     "vipObjectType" : "object",
+                     "vipVariableName" : "pim_if_name",
+                     "vipType" : "variableName",
+                     "vipValue" : ""
+                  },
+                  "priority-order" : [
+                     "name",
+                     "hello-interval",
+                     "join-prune-interval"
+                  ],
+                  "join-prune-interval" : {
+                     "vipValue" : 60,
+                     "vipType" : "ignore",
+                     "vipObjectType" : "object",
+                     "vipVariableName" : "pim_join_prune_interval"
+                  },
+                  "hello-interval" : {
+                     "vipValue" : 30,
+                     "vipVariableName" : "pim_hello_interval",
+                     "vipObjectType" : "object",
+                     "vipType" : "ignore"
+                  }
+               }
+            ],
+            "vipType" : "constant",
+            "vipObjectType" : "tree"
+         },
+         "replicator-selection" : {
+            "vipValue" : "sticky",
+            "vipType" : "ignore",
+            "vipObjectType" : "object",
+            "vipVariableName" : "pim_replicator_selection"
+         },
+         "auto-rp" : {
+            "vipVariableName" : "pim_auto_rp",
+            "vipObjectType" : "object",
+            "vipType" : "ignore",
+            "vipValue" : "false"
+         },
+         "spt-threshold" : {
+            "vipValue" : 0,
+            "vipType" : "ignore",
+            "vipObjectType" : "object",
+            "vipVariableName" : "pim_spt_threshold"
+         },
+         "shutdown" : {
+            "vipValue" : "false",
+            "vipVariableName" : "pim_shutdown",
+            "vipObjectType" : "object",
+            "vipType" : "ignore"
+         }
+      }
+   }
+}

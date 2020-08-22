@@ -1,0 +1,47 @@
+{
+  "templateName": "vSmart_Template",
+  "templateDescription": "vSmart_Template",
+  "deviceType": "vsmart",
+  "configType": "template",
+  "factoryDefault": false,
+  "policyId": "",
+  "featureTemplateUidRange": [],
+  "generalTemplates": [
+    {
+      "templateId": "7a7e21b1-8e90-4eb7-a2c6-9041ee0c0013",
+      "templateType": "aaa"
+    },
+    {
+      "templateId": "177b4536-1d34-4dbf-9d44-04a63cafd6cd",
+      "templateType": "omp-vsmart"
+    },
+    {
+      "templateId": "8c551322-751b-493c-8d40-58abe8262a25",
+      "templateType": "security-vsmart"
+    },
+    {
+      "templateId": "af4fd6ac-52b6-4238-b6fe-3a37d8c2d37a",
+      "templateType": "system-vsmart",
+      "subTemplates": [
+        {
+          "templateId": "355c4d34-2c07-4561-a494-2120762f6cba",
+          "templateType": "logging"
+        }
+      ]
+    },
+    {
+      "templateId": "7b048a6f-c5e7-4ed8-a90b-6bf46db1df74",
+      "templateType": "vpn-vsmart",
+      "subTemplates": [
+        {
+          "templateId": "330894a8-fce1-41de-8af6-0208e84dccde",
+          "templateType": "vpn-vsmart-interface"
+        }
+      ]
+    },
+    {
+      "templateId": "f640e38c-55c6-4c99-acdf-fe39f472dfe2",
+      "templateType": "vpn-vsmart"
+    }
+  ]
+}

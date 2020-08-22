@@ -1,0 +1,43 @@
+!WAN
+!
+conf t
+!
+hostname WAN
+!
+vlan 100
+exit
+!
+interface Ethernet0/0
+ description Connected-To-INTERNET-E0/0
+ no switchport
+ ip address 200.200.100.2 255.255.255.252
+ no shut
+!
+interface Ethernet0/1
+ switchport access vlan 100
+ no shut
+!
+interface Ethernet0/2
+ switchport access vlan 100
+ no shut
+!
+interface Ethernet0/3
+ switchport access vlan 100
+ no shut
+!
+interface Ethernet1/0
+ description Connected-To-MPLS-E1/0
+ no switchport
+ ip address 172.16.1.2 255.255.255.252
+ no shut
+!
+interface Vlan100
+ description SVI-For-Viptela
+ ip address 10.1.1.254 255.255.255.0
+ no shut
+!
+ip route 172.16.1.0 255.255.255.0 172.16.1.1
+ip route 200.200.100.0 255.255.255.0 200.200.100.1
+!
+end
+wr

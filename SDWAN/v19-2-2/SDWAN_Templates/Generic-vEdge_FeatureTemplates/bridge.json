@@ -1,0 +1,87 @@
+{
+   "templateMinVersion" : "15.0.0",
+   "templateDescription" : "Bridge",
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateType" : "bridge",
+   "templateDefinition" : {
+      "interface" : {
+         "vipObjectType" : "tree",
+         "vipPrimaryKey" : [
+            "if-name"
+         ],
+         "vipValue" : [
+            {
+               "priority-order" : [
+                  "if-name",
+                  "description",
+                  "native-vlan",
+                  "static-mac-address",
+                  "shutdown"
+               ],
+               "static-mac-address" : {
+                  "vipPrimaryKey" : [
+                     "macaddr"
+                  ],
+                  "vipObjectType" : "tree",
+                  "vipValue" : [],
+                  "vipType" : "ignore"
+               },
+               "native-vlan" : {
+                  "vipVariableName" : "bridge_native_vlan",
+                  "vipObjectType" : "object",
+                  "vipType" : "ignore",
+                  "vipValue" : "false"
+               },
+               "shutdown" : {
+                  "vipVariableName" : "bridge_shutdown",
+                  "vipObjectType" : "object",
+                  "vipValue" : "true",
+                  "vipType" : "ignore"
+               },
+               "if-name" : {
+                  "vipType" : "variableName",
+                  "vipValue" : "",
+                  "vipVariableName" : "bridge_if_name",
+                  "vipObjectType" : "object"
+               },
+               "description" : {
+                  "vipVariableName" : "bridge_description",
+                  "vipObjectType" : "object",
+                  "vipValue" : "",
+                  "vipType" : "ignore"
+               }
+            }
+         ],
+         "vipType" : "constant"
+      },
+      "name" : {
+         "vipVariableName" : "bridge_name_TestBridge",
+         "vipObjectType" : "object",
+         "vipType" : "variableName",
+         "vipValue" : ""
+      },
+      "max-macs" : {
+         "vipObjectType" : "object",
+         "vipVariableName" : "bridge_maxMacs",
+         "vipType" : "ignore",
+         "vipValue" : 1024
+      },
+      "vlan" : {
+         "vipObjectType" : "object",
+         "vipVariableName" : "bridge_vlan",
+         "vipType" : "ignore"
+      },
+      "age-time" : {
+         "vipType" : "ignore",
+         "vipValue" : 300,
+         "vipVariableName" : "bridge_ageTime",
+         "vipObjectType" : "object"
+      }
+   },
+
+   "templateName" : "Bridge",
+   "configType" : "xml",
+   "factoryDefault" : false
+}

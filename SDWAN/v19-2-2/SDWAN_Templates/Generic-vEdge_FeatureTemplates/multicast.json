@@ -1,0 +1,28 @@
+{
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateName" : "Multicast",
+   "templateMinVersion" : "15.0.0",
+   "templateType" : "multicast",
+   "templateDefinition" : {
+      "multicast-replicator" : {
+         "threshold" : {
+            "vipVariableName" : "multicast_replicator_threshold",
+            "vipValue" : 0,
+            "vipObjectType" : "object",
+            "vipType" : "ignore"
+         },
+         "local" : {
+            "vipVariableName" : "multicast_replicator_local",
+            "vipValue" : "false",
+            "vipType" : "constant",
+            "vipObjectType" : "object"
+         }
+      }
+   },
+   "configType" : "xml",
+   "templateDescription" : "Multicast",
+   "factoryDefault" : false,
+   "lastUpdatedBy" : "admin"
+}

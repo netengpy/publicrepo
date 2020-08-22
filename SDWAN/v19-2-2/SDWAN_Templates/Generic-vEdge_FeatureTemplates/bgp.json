@@ -1,0 +1,173 @@
+  {
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateName" : "BGP",
+   "configType" : "xml",
+   "templateDescription" : "BGP",
+   "factoryDefault" : false,
+   "templateMinVersion" : "15.0.0",
+   "templateType" : "bgp",
+   "templateDefinition" : {
+      "bgp" : {
+         "propagate-aspath" : {
+            "vipObjectType" : "object",
+            "vipValue" : "false",
+            "vipType" : "ignore",
+            "vipVariableName" : "propagate_aspath"
+         },
+         "as-num" : {
+            "vipValue" : "",
+            "vipObjectType" : "object",
+            "vipVariableName" : "bgp_as_num",
+            "vipType" : "variableName"
+         },
+         "shutdown" : {
+            "vipObjectType" : "object",
+            "vipValue" : "false",
+            "vipType" : "ignore",
+            "vipVariableName" : "bgp_shutdown"
+         },
+         "router-id" : {
+            "vipVariableName" : "bgp_router_id",
+            "vipType" : "ignore",
+            "vipObjectType" : "object"
+         },
+         "timers" : {
+            "holdtime" : {
+               "vipObjectType" : "object",
+               "vipValue" : 180,
+               "vipType" : "ignore",
+               "vipVariableName" : "bgp_holdtime"
+            },
+            "keepalive" : {
+               "vipValue" : 60,
+               "vipObjectType" : "object",
+               "vipVariableName" : "bgp_keepalive",
+               "vipType" : "ignore"
+            }
+         },
+         "distance" : {
+            "internal" : {
+               "vipValue" : 200,
+               "vipObjectType" : "object",
+               "vipVariableName" : "routes-distance_internal",
+               "vipType" : "ignore"
+            },
+            "external" : {
+               "vipObjectType" : "object",
+               "vipValue" : 20,
+               "vipType" : "ignore",
+               "vipVariableName" : "routes-distance_external"
+            },
+            "local" : {
+               "vipObjectType" : "object",
+               "vipValue" : 20,
+               "vipType" : "ignore",
+               "vipVariableName" : "routes-distance_local"
+            }
+         },
+         "best-path" : {
+            "med" : {
+               "always-compare" : {
+                  "vipValue" : "false",
+                  "vipObjectType" : "object",
+                  "vipVariableName" : "bgp_always_compare",
+                  "vipType" : "ignore"
+               },
+               "missing-as-worst" : {
+                  "vipType" : "ignore",
+                  "vipVariableName" : "bgp_missing_as_worst",
+                  "vipObjectType" : "object",
+                  "vipValue" : "false"
+               },
+               "deterministic" : {
+                  "vipVariableName" : "bgp_deterministic",
+                  "vipType" : "ignore",
+                  "vipValue" : "false",
+                  "vipObjectType" : "object"
+               }
+            },
+            "as-path" : {
+               "multipath-relax" : {
+                  "vipValue" : "false",
+                  "vipObjectType" : "object",
+                  "vipVariableName" : "bgp_multipath_relax",
+                  "vipType" : "ignore"
+               }
+            },
+            "compare-router-id" : {
+               "vipObjectType" : "object",
+               "vipValue" : "false",
+               "vipType" : "ignore",
+               "vipVariableName" : "bgp_compare_router_id"
+            }
+         },
+         "neighbor" : {
+            "vipType" : "ignore",
+            "vipPrimaryKey" : [
+               "address"
+            ],
+            "vipObjectType" : "tree",
+            "vipValue" : []
+         },
+         "address-family" : {
+            "vipObjectType" : "tree",
+            "vipValue" : [
+               {
+                  "network" : {
+                     "vipPrimaryKey" : [
+                        "prefix"
+                     ],
+                     "vipType" : "ignore",
+                     "vipValue" : [],
+                     "vipObjectType" : "tree"
+                  },
+                  "redistribute" : {
+                     "vipPrimaryKey" : [
+                        "protocol"
+                     ],
+                     "vipType" : "ignore",
+                     "vipValue" : [],
+                     "vipObjectType" : "tree"
+                  },
+                  "aggregate-address" : {
+                     "vipValue" : [],
+                     "vipObjectType" : "tree",
+                     "vipPrimaryKey" : [
+                        "prefix"
+                     ],
+                     "vipType" : "ignore"
+                  },
+                  "family-type" : {
+                     "vipObjectType" : "object",
+                     "vipValue" : "ipv4-unicast",
+                     "vipType" : "constant"
+                  },
+                  "priority-order" : [
+                     "family-type",
+                     "aggregate-address",
+                     "network",
+                     "maximum-paths",
+                     "redistribute"
+                  ],
+                  "maximum-paths" : {
+                     "paths" : {
+                        "vipVariableName" : "bgp_maximum_paths",
+                        "vipType" : "ignore",
+                        "vipValue" : "",
+                        "vipObjectType" : "object"
+                     }
+                  }
+               }
+            ],
+            "vipType" : "constant",
+            "vipPrimaryKey" : [
+               "family-type"
+            ]
+         }
+      }
+   },
+   "createdBy" : "admin",
+   "devicesAttached" : 0
+}

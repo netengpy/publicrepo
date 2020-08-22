@@ -1,0 +1,98 @@
+{
+   "feature" : "vmanage-default",
+   "templateMinVersion" : "15.0.0",
+   "templateDescription" : "OMP parameters for Branch routers",
+   "templateName" : "OMP",
+   "factoryDefault" : false,
+   "templateDefinition" : {
+      "ecmp-limit" : {
+         "vipObjectType" : "object",
+         "vipVariableName" : "omp_ecmp_limit",
+         "vipType" : "constant",
+         "vipValue" : 8
+      },
+      "shutdown" : {
+         "vipVariableName" : "omp_shutdown",
+         "vipObjectType" : "object",
+         "vipType" : "ignore",
+         "vipValue" : "false"
+      },
+      "timers" : {
+         "graceful-restart-timer" : {
+            "vipObjectType" : "object",
+            "vipVariableName" : "omp_graceful_restart_timer",
+            "vipType" : "ignore",
+            "vipValue" : 43200
+         },
+         "advertisement-interval" : {
+            "vipValue" : 1,
+            "vipType" : "ignore",
+            "vipVariableName" : "omp_advertisement_interval",
+            "vipObjectType" : "object"
+         },
+         "holdtime" : {
+            "vipValue" : 60,
+            "vipType" : "ignore",
+            "vipVariableName" : "omp_holdtime",
+            "vipObjectType" : "object"
+         },
+         "eor-timer" : {
+            "vipVariableName" : "omp_eor_timer",
+            "vipObjectType" : "object",
+            "vipType" : "ignore",
+            "vipValue" : 300
+         }
+      },
+      "graceful-restart" : {
+         "vipType" : "ignore",
+         "vipValue" : "true",
+         "vipObjectType" : "object",
+         "vipVariableName" : "omp_graceful_restart"
+      },
+      "advertise" : {
+         "vipValue" : [
+            {
+               "priority-order" : [
+                  "protocol"
+               ],
+               "protocol" : {
+                  "vipValue" : "connected",
+                  "vipType" : "constant",
+                  "vipObjectType" : "object"
+               }
+            },
+            {
+               "protocol" : {
+                  "vipValue" : "static",
+                  "vipType" : "constant",
+                  "vipObjectType" : "object"
+               },
+               "priority-order" : [
+                  "protocol"
+               ]
+            }
+         ],
+         "vipType" : "constant",
+         "vipObjectType" : "tree",
+         "vipPrimaryKey" : [
+            "protocol"
+         ]
+      },
+      "overlay-as" : {
+         "vipVariableName" : "overlay_as",
+         "vipObjectType" : "object",
+         "vipType" : "ignore"
+      },
+      "send-path-limit" : {
+         "vipValue" : 4,
+         "vipType" : "ignore",
+         "vipObjectType" : "object",
+         "vipVariableName" : "omp_send_path_limit"
+      }
+   },
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateType" : "omp-vedge",
+   "configType" : "xml"
+}

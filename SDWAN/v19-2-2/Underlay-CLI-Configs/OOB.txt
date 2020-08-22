@@ -1,0 +1,41 @@
+en
+conf t
+!
+hostname OOB
+!
+vlan 10,512
+exit
+!
+ip dhcp excluded-address 192.168.10.254
+!
+ip dhcp pool MGMT
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.254
+!
+interface Ethernet0/0
+ switchport access vlan 512
+ no shut
+!
+interface Ethernet0/1
+ switchport access vlan 512
+ no shut
+!
+interface Ethernet0/2
+ switchport access vlan 512
+ no shut
+!
+interface Ethernet0/3
+ switchport access vlan 10
+ no shut
+!
+interface Vlan10
+ ip address 192.168.10.254 255.255.255.0
+ no shut
+!
+interface Vlan512
+ ip address 192.168.1.254 255.255.255.0
+ no shut
+!
+end
+wr
+

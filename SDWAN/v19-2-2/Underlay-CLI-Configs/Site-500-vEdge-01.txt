@@ -1,0 +1,28 @@
+!Site-500-vEdge-01
+!
+conf t
+system
+host-name Site-500-vEdge-01
+system-ip 5.1.1.1
+site-id 500
+organization-name mystacktracecom
+vbond 10.1.1.2
+!
+vpn 0
+ interface ge0/0
+  ip address 200.200.100.6/30
+  no shutdown
+ !
+ interface ge0/1
+  ip address 172.16.1.6/30
+  no shutdown
+ !
+ ip route 0.0.0.0/0 172.16.1.5
+ ip route 0.0.0.0/0 200.200.100.5
+!
+vpn 1
+ interface ge0/2
+  ip address 192.168.5.254/24
+  no shutdown
+ !
+ commit and-quit

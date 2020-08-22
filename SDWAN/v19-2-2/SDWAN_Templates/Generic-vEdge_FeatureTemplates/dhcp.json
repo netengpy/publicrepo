@@ -1,0 +1,82 @@
+    {
+   "templateDefinition" : {
+      "exclude" : {
+         "vipVariableName" : "dhcp-address_exclude",
+         "vipObjectType" : "list",
+         "vipType" : "ignore"
+      },
+      "offer-time" : {
+         "vipValue" : 600,
+         "vipObjectType" : "object",
+         "vipType" : "ignore",
+         "vipVariableName" : "offer_time"
+      },
+      "static-lease" : {
+         "vipValue" : [],
+         "vipObjectType" : "tree",
+         "vipPrimaryKey" : [
+            "mac-address"
+         ],
+         "vipType" : "ignore"
+      },
+      "address-pool" : {
+         "vipType" : "variableName",
+         "vipObjectType" : "object",
+         "vipValue" : "",
+         "vipVariableName" : "dhcp_address_pool"
+      },
+      "max-leases" : {
+         "vipVariableName" : "max_leases",
+         "vipType" : "ignore",
+         "vipObjectType" : "object"
+      },
+      "options" : {
+         "tftp-servers" : {
+            "vipVariableName" : "tftp-server",
+            "vipObjectType" : "list",
+            "vipType" : "ignore"
+         },
+         "default-gateway" : {
+            "vipVariableName" : "dhcp_default_gateway",
+            "vipType" : "ignore",
+            "vipObjectType" : "object"
+         },
+         "interface-mtu" : {
+            "vipObjectType" : "object",
+            "vipType" : "ignore",
+            "vipVariableName" : "dhcp_interface_mtu"
+         },
+         "domain-name" : {
+            "vipObjectType" : "object",
+            "vipType" : "ignore",
+            "vipVariableName" : "dhcp_domain_name"
+         },
+         "dns-servers" : {
+            "vipObjectType" : "list",
+            "vipType" : "ignore",
+            "vipVariableName" : "dhcp_dns_server"
+         }
+      },
+      "admin-state" : {
+         "vipValue" : "up",
+         "vipObjectType" : "object",
+         "vipType" : "ignore",
+         "vipVariableName" : "admin_state"
+      },
+      "lease-time" : {
+         "vipVariableName" : "lease_time",
+         "vipValue" : 86400,
+         "vipType" : "ignore",
+         "vipObjectType" : "object"
+      }
+   },
+   "templateDescription" : "DHCP",
+   "templateType" : "dhcp-server",
+   "configType" : "xml",
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateName" : "DHCP",
+   "factoryDefault" : false,
+   "templateMinVersion" : "15.0.0"
+}

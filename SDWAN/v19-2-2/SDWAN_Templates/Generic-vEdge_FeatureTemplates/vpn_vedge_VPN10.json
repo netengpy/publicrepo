@@ -1,0 +1,97 @@
+{
+   "factoryDefault" : false,
+   "templateType" : "vpn-vedge",
+   "templateMinVersion" : "15.0.0",
+   "templateDefinition" : {
+      "ip" : {
+         "ipsec-route" : {},
+         "gre-route" : {}
+      },
+      "vpn-id" : {
+         "vipValue" : 10,
+         "vipType" : "constant",
+         "vipObjectType" : "object"
+      },
+      "ecmp-hash-key" : {
+         "layer4" : {
+            "vipType" : "ignore",
+            "vipObjectType" : "object",
+            "vipValue" : "false",
+            "vipVariableName" : "vpn_layer4"
+         }
+      },
+      "tcp-optimization" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "node-only",
+         "vipValue" : "false",
+         "vipVariableName" : "vpn_tcp_optimization"
+      },
+      "name" : {
+         "vipObjectType" : "object",
+         "vipType" : "ignore",
+         "vipVariableName" : "vpn_name"
+      },
+      "omp" : {
+         "advertise" : {
+            "vipType" : "constant",
+            "vipObjectType" : "tree",
+            "vipValue" : [
+               {
+                  "protocol" : {
+                     "vipObjectType" : "object",
+                     "vipType" : "constant",
+                     "vipValue" : "connected"
+                  },
+                  "priority-order" : [
+                     "protocol"
+                  ]
+               },
+               {
+                  "protocol-sub-type" : {
+                     "vipValue" : "external",
+                     "vipObjectType" : "object",
+                     "vipType" : "constant"
+                  },
+                  "protocol" : {
+                     "vipType" : "constant",
+                     "vipObjectType" : "object",
+                     "vipValue" : "ospf"
+                  },
+                  "priority-order" : [
+                     "protocol",
+                     "protocol-sub-type"
+                  ]
+               }
+            ],
+            "vipPrimaryKey" : [
+               "protocol"
+            ]
+         }
+      },
+      "service" : {
+         "vipPrimaryKey" : [
+            "svc-type"
+         ],
+         "vipValue" : [],
+         "vipType" : "ignore",
+         "vipObjectType" : "tree"
+      },
+      "host" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "tree",
+         "vipValue" : [],
+         "vipPrimaryKey" : [
+            "hostname"
+         ]
+      },
+      "ipv6" : {}
+   },
+   "attachedMastersCount" : 2,
+   "templateDescription" : "VPN10 configuration for Branch Routers",
+   "feature" : "vmanage-default",
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateName" : "Branch_VPN10",
+   "configType" : "xml"
+}

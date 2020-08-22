@@ -1,0 +1,30 @@
+!INTERNET
+!
+conf t
+!
+hostname INTERNET
+!
+interface Ethernet0/0
+ ip address 200.200.100.1 255.255.255.252
+ no shut
+!
+interface Ethernet0/1
+ ip address 200.200.100.17 255.255.255.252
+ no shut
+!
+interface Ethernet0/2
+ ip address 200.200.100.13 255.255.255.252
+ no shut
+!
+interface Ethernet0/3
+ ip address 200.200.100.5 255.255.255.252
+ no shut
+!
+interface Ethernet1/0
+ ip address 200.200.100.9 255.255.255.252
+ no shut
+!
+ip route 10.1.1.0 255.255.255.0 200.200.100.2
+!
+end
+wr

@@ -1,0 +1,440 @@
+ {
+   "configType" : "xml",
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateName" : "MPLS_TLOC_Interface",
+   "templateDefinition" : {
+      "tloc-extension-gre-from" : {
+         "src-ip" : {
+            "vipVariableName" : "vpn_if_tloc-ext_gre_from_src_ip",
+            "vipObjectType" : "object",
+            "vipType" : "ignore"
+         },
+         "xconnect" : {
+            "vipType" : "ignore",
+            "vipVariableName" : "vpn_if_tloc-ext_gre_from_xconnect",
+            "vipObjectType" : "object"
+         }
+      },
+      "block-non-source-ip" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "object",
+         "vipValue" : "false",
+         "vipVariableName" : "vpn_if_block_non_source_ip"
+      },
+      "bandwidth-upstream" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "object",
+         "vipVariableName" : "vpn_if_bandwidth_upstream"
+      },
+      "autonegotiate" : {
+         "vipValue" : "true",
+         "vipObjectType" : "object",
+         "vipVariableName" : "vpn_if_autonegotiate",
+         "vipType" : "ignore"
+      },
+      "bandwidth-downstream" : {
+         "vipObjectType" : "object",
+         "vipVariableName" : "vpn_if_bandwidth_downstream",
+         "vipType" : "ignore"
+      },
+      "description" : {
+         "vipType" : "constant",
+         "vipValue" : "MPLS Interface",
+         "vipObjectType" : "object",
+         "vipVariableName" : "vpn_if_description"
+      },
+      "shaping-rate" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "object",
+         "vipVariableName" : "qos_shaping_rate"
+      },
+      "tunnel-interface" : {
+         "hello-tolerance" : {
+            "vipObjectType" : "object",
+            "vipValue" : 12,
+            "vipVariableName" : "vpn_if_tunnel_hello_tolerance",
+            "vipType" : "ignore"
+         },
+         "nat-refresh-interval" : {
+            "vipObjectType" : "object",
+            "vipValue" : 5,
+            "vipVariableName" : "vpn_if_tunnel_nat_refresh_interval",
+            "vipType" : "ignore"
+         },
+         "low-bandwidth-link" : {
+            "vipType" : "ignore",
+            "vipObjectType" : "object",
+            "vipValue" : "false",
+            "vipVariableName" : "vpn_if_tunnel_low_bandwidth_link"
+         },
+         "vmanage-connection-preference" : {
+            "vipValue" : 5,
+            "vipObjectType" : "object",
+            "vipVariableName" : "vpn_if_tunnel_vmanage_connection_preference",
+            "vipType" : "ignore"
+         },
+         "allow-service" : {
+            "bgp" : {
+               "vipVariableName" : "vpn_if_tunnel_bgp",
+               "vipValue" : "false",
+               "vipObjectType" : "object",
+               "vipType" : "ignore"
+            },
+            "stun" : {
+               "vipType" : "ignore",
+               "vipVariableName" : "vpn_if_tunnel_stun",
+               "vipValue" : "false",
+               "vipObjectType" : "object"
+            },
+            "all" : {
+               "vipType" : "ignore",
+               "vipVariableName" : "vpn_if_tunnel_all",
+               "vipObjectType" : "object",
+               "vipValue" : "false"
+            },
+            "ntp" : {
+               "vipVariableName" : "vpn_if_tunnel_ntp",
+               "vipValue" : "true",
+               "vipObjectType" : "object",
+               "vipType" : "constant"
+            },
+            "https" : {
+               "vipType" : "ignore",
+               "vipVariableName" : "vpn_if_tunnel_https",
+               "vipObjectType" : "object",
+               "vipValue" : "true"
+            },
+            "ospf" : {
+               "vipObjectType" : "object",
+               "vipValue" : "false",
+               "vipVariableName" : "vpn_if_tunnel_ospf",
+               "vipType" : "ignore"
+            },
+            "dhcp" : {
+               "vipVariableName" : "vpn_if_tunnel_dhcp",
+               "vipValue" : "true",
+               "vipObjectType" : "object",
+               "vipType" : "ignore"
+            },
+            "sshd" : {
+               "vipType" : "constant",
+               "vipVariableName" : "vpn_if_tunnel_sshd",
+               "vipObjectType" : "object",
+               "vipValue" : "true"
+            },
+            "netconf" : {
+               "vipType" : "ignore",
+               "vipValue" : "false",
+               "vipObjectType" : "object",
+               "vipVariableName" : "vpn_if_tunnel_netconf"
+            },
+            "icmp" : {
+               "vipVariableName" : "vpn_if_tunnel_icmp",
+               "vipValue" : "true",
+               "vipObjectType" : "object",
+               "vipType" : "ignore"
+            },
+            "dns" : {
+               "vipType" : "ignore",
+               "vipValue" : "true",
+               "vipObjectType" : "object",
+               "vipVariableName" : "vpn_if_tunnel_dns"
+            }
+         },
+         "vbond-as-stun-server" : {
+            "vipValue" : "false",
+            "vipObjectType" : "object",
+            "vipVariableName" : "vpn_if_tunnel_vbond_as_stun_server",
+            "vipType" : "ignore"
+         },
+         "color" : {
+            "value" : {
+               "vipObjectType" : "object",
+               "vipValue" : "mpls",
+               "vipVariableName" : "vpn_if_tunnel_color_value",
+               "vipType" : "constant"
+            },
+            "restrict" : {
+               "vipType" : "constant",
+               "vipObjectType" : "node-only",
+               "vipValue" : "true",
+               "vipVariableName" : "vpn_if_tunnel_color_restrict"
+            }
+         },
+         "bind" : {
+            "vipType" : "ignore",
+            "vipObjectType" : "object",
+            "vipVariableName" : "vpn_if_tunnel_bind"
+         },
+         "max-control-connections" : {
+            "vipType" : "ignore",
+            "vipObjectType" : "object",
+            "vipVariableName" : "vpn_if_tunnel_max_control_connections"
+         },
+         "tloc-extension-gre-to" : {
+            "dst-ip" : {
+               "vipVariableName" : "vpn_if_tunnel_tloc_ext_gre_to_dst_ip",
+               "vipObjectType" : "object",
+               "vipType" : "ignore"
+            }
+         },
+         "border" : {
+            "vipVariableName" : "vpn_if_tunnel_border",
+            "vipObjectType" : "object",
+            "vipValue" : "false",
+            "vipType" : "ignore"
+         },
+         "group" : {
+            "vipType" : "ignore",
+            "vipVariableName" : "vpn_if_tunnel_group",
+            "vipObjectType" : "list"
+         },
+         "encapsulation" : {
+            "vipType" : "constant",
+            "vipPrimaryKey" : [
+               "encap"
+            ],
+            "vipObjectType" : "tree",
+            "vipValue" : [
+               {
+                  "preference" : {
+                     "vipType" : "ignore",
+                     "vipObjectType" : "object",
+                     "vipVariableName" : "vpn_if_tunnel_ipsec_preference"
+                  },
+                  "encap" : {
+                     "vipValue" : "ipsec",
+                     "vipObjectType" : "object",
+                     "vipType" : "constant"
+                  },
+                  "priority-order" : [
+                     "encap",
+                     "preference",
+                     "weight"
+                  ],
+                  "weight" : {
+                     "vipVariableName" : "vpn_if_tunnel_ipsec_weight",
+                     "vipObjectType" : "object",
+                     "vipValue" : 1,
+                     "vipType" : "ignore"
+                  }
+               }
+            ]
+         },
+         "carrier" : {
+            "vipType" : "ignore",
+            "vipObjectType" : "object",
+            "vipValue" : "default",
+            "vipVariableName" : "vpn_if_tunnel_carrier"
+         },
+         "port-hop" : {
+            "vipVariableName" : "vpn_if_tunnel_port_hop",
+            "vipObjectType" : "object",
+            "vipValue" : "true",
+            "vipType" : "ignore"
+         },
+         "hello-interval" : {
+            "vipValue" : 1000,
+            "vipObjectType" : "object",
+            "vipVariableName" : "vpn_if_tunnel_hello_interval",
+            "vipType" : "ignore"
+         },
+         "last-resort-circuit" : {
+            "vipType" : "ignore",
+            "vipObjectType" : "object",
+            "vipValue" : "false",
+            "vipVariableName" : "vpn_if_tunnel_last_resort_circuit"
+         },
+         "exclude-controller-group-list" : {
+            "vipVariableName" : "vpn_if_tunnel_exclude_controller_group_list",
+            "vipObjectType" : "list",
+            "vipType" : "ignore"
+         },
+         "control-connections" : {
+            "vipValue" : "true",
+            "vipObjectType" : "object",
+            "vipVariableName" : "control_connections",
+            "vipType" : "ignore"
+         }
+      },
+      "access-list" : {
+         "vipType" : "ignore",
+         "vipPrimaryKey" : [
+            "direction"
+         ],
+         "vipObjectType" : "tree",
+         "vipValue" : []
+      },
+      "policer" : {
+         "vipValue" : [],
+         "vipObjectType" : "tree",
+         "vipPrimaryKey" : [
+            "policer-name",
+            "direction"
+         ],
+         "vipType" : "ignore"
+      },
+      "tcp-mss-adjust" : {
+         "vipVariableName" : "vpn_if_tcp_mss_adjust",
+         "vipObjectType" : "object",
+         "vipType" : "ignore"
+      },
+      "static-ingress-qos" : {
+         "vipVariableName" : "vpn_if_static_ingress_qos",
+         "vipObjectType" : "object",
+         "vipType" : "ignore"
+      },
+      "duplex" : {
+         "vipVariableName" : "vpn_if_duplex",
+         "vipValue" : "_empty",
+         "vipObjectType" : "object",
+         "vipType" : "ignore"
+      },
+      "if-name" : {
+         "vipType" : "constant",
+         "vipVariableName" : "vpn_if_name",
+         "vipValue" : "ge0/0",
+         "vipObjectType" : "object"
+      },
+      "qos-map" : {
+         "vipObjectType" : "object",
+         "vipVariableName" : "qos_map",
+         "vipType" : "ignore"
+      },
+      "arp-timeout" : {
+         "vipVariableName" : "vpn_if_arp_timeout",
+         "vipValue" : 1200,
+         "vipObjectType" : "object",
+         "vipType" : "ignore"
+      },
+      "tracker" : {
+         "vipType" : "ignore",
+         "vipVariableName" : "vpn_if_tracker",
+         "vipObjectType" : "list"
+      },
+      "icmp-redirect-disable" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "object",
+         "vipValue" : "false",
+         "vipVariableName" : "vpn_if_icmp_redirect_disable"
+      },
+      "clear-dont-fragment" : {
+         "vipVariableName" : "vpn_if_clear_dont_fragment",
+         "vipObjectType" : "object",
+         "vipValue" : "false",
+         "vipType" : "ignore"
+      },
+      "ip" : {
+         "secondary-address" : {
+            "vipValue" : [],
+            "vipObjectType" : "tree",
+            "vipType" : "ignore",
+            "vipPrimaryKey" : [
+               "address"
+            ]
+         },
+         "address" : {
+            "vipVariableName" : "vpn_if_ipv4_address",
+            "vipObjectType" : "object",
+            "vipValue" : "",
+            "vipType" : "variableName"
+         }
+      },
+      "dot1x" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "node-only"
+      },
+      "flow-control" : {
+         "vipType" : "ignore",
+         "vipVariableName" : "vpn_if_flow_control",
+         "vipValue" : "autoneg",
+         "vipObjectType" : "object"
+      },
+      "arp" : {
+         "ip" : {
+            "vipValue" : [],
+            "vipObjectType" : "tree",
+            "vipType" : "ignore",
+            "vipPrimaryKey" : [
+               "addr"
+            ]
+         }
+      },
+      "dhcp-helper" : {
+         "vipObjectType" : "list",
+         "vipVariableName" : "vpn_if_dhcp_helper",
+         "vipType" : "ignore"
+      },
+      "tloc-extension" : {
+         "vipObjectType" : "object",
+         "vipVariableName" : "vpn_if_tloc_extension",
+         "vipType" : "ignore"
+      },
+      "vrrp" : {
+         "vipType" : "ignore",
+         "vipPrimaryKey" : [
+            "grp-id"
+         ],
+         "vipObjectType" : "tree",
+         "vipValue" : []
+      },
+      "pmtu" : {
+         "vipObjectType" : "object",
+         "vipValue" : "false",
+         "vipVariableName" : "vpn_if_pmtu",
+         "vipType" : "ignore"
+      },
+      "rewrite-rule" : {
+         "rule-name" : {
+            "vipType" : "ignore",
+            "vipVariableName" : "rewrite_rule_name",
+            "vipObjectType" : "object"
+         }
+      },
+      "ipv6" : {
+         "access-list" : {
+            "vipType" : "ignore",
+            "vipPrimaryKey" : [
+               "direction"
+            ],
+            "vipValue" : [],
+            "vipObjectType" : "tree"
+         },
+         "address" : {
+            "vipObjectType" : "object",
+            "vipVariableName" : "vpn_if_ipv6_address",
+            "vipType" : "ignore"
+         }
+      },
+      "speed" : {
+         "vipVariableName" : "vpn_if_speed",
+         "vipValue" : "_empty",
+         "vipObjectType" : "object",
+         "vipType" : "ignore"
+      },
+      "shutdown" : {
+         "vipObjectType" : "object",
+         "vipValue" : "false",
+         "vipVariableName" : "vpn_if_shutdown",
+         "vipType" : "constant"
+      },
+      "mtu" : {
+         "vipType" : "ignore",
+         "vipVariableName" : "vpn_if_ip_mtu",
+         "vipObjectType" : "object",
+         "vipValue" : 1500
+      },
+      "mac-address" : {
+         "vipObjectType" : "object",
+         "vipVariableName" : "vpn_if_mac_address",
+         "vipType" : "ignore"
+      }
+   },
+   "feature" : "vmanage-default",
+   "factoryDefault" : false,
+   "templateDescription" : "MPLS WAN Transport",
+   "templateMinVersion" : "15.0.0",
+   "templateType" : "vpn-vedge-interface"
+}

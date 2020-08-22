@@ -1,0 +1,200 @@
+{
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateType" : "system-vedge",
+   "templateMinVersion" : "15.0.0",
+   "factoryDefault" : false,
+   "feature" : "vmanage-default",
+   "templateName" : "Basic_System_Template",
+   "templateDescription" : "Basic Edge",
+   "templateDefinition" : {
+      "port-offset" : {
+         "vipValue" : 0,
+         "vipType" : "ignore",
+         "vipObjectType" : "object",
+         "vipVariableName" : "system_port_offset"
+      },
+      "clock" : {
+         "timezone" : {
+            "vipVariableName" : "system_timezone",
+            "vipObjectType" : "object",
+            "vipValue" : "UTC",
+            "vipType" : "ignore"
+         }
+      },
+      "timer" : {
+         "dns-cache-timeout" : {
+            "vipVariableName" : "system_dns_cache_timeout",
+            "vipType" : "ignore",
+            "vipValue" : 2,
+            "vipObjectType" : "object"
+         }
+      },
+      "track-default-gateway" : {
+         "vipVariableName" : "system_track_default_gateway",
+         "vipObjectType" : "object",
+         "vipType" : "ignore",
+         "vipValue" : "true"
+      },
+      "console-baud-rate" : {
+         "vipValue" : "115200",
+         "vipType" : "constant",
+         "vipObjectType" : "object",
+         "vipVariableName" : "system_console_baud_rate"
+      },
+      "track-transport" : {
+         "vipVariableName" : "system_track_transport",
+         "vipObjectType" : "object",
+         "vipValue" : "true",
+         "vipType" : "ignore"
+      },
+      "control-session-pps" : {
+         "vipVariableName" : "system_control_session_pps",
+         "vipValue" : 300,
+         "vipType" : "ignore",
+         "vipObjectType" : "object"
+      },
+      "host-policer-pps" : {
+         "vipObjectType" : "object",
+         "vipType" : "ignore",
+         "vipValue" : 20000,
+         "vipVariableName" : "system_host_policer_pps"
+      },
+      "tracker" : {
+         "vipType" : "ignore",
+         "vipValue" : [],
+         "vipObjectType" : "tree",
+         "vipPrimaryKey" : [
+            "name"
+         ]
+      },
+      "system-ip" : {
+         "vipVariableName" : "system_system_ip",
+         "vipObjectType" : "object",
+         "vipValue" : "",
+         "vipType" : "variableName"
+      },
+      "eco-friendly-mode" : {
+         "vipVariableName" : "system_eco_friendly_mode",
+         "vipType" : "ignore",
+         "vipValue" : "false",
+         "vipObjectType" : "object"
+      },
+      "track-interface-tag" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "object",
+         "vipVariableName" : "system_track_interface_tag"
+      },
+      "icmp-error-pps" : {
+         "vipVariableName" : "system_icmp_error_pps",
+         "vipObjectType" : "object",
+         "vipType" : "ignore",
+         "vipValue" : 100
+      },
+      "admin-tech-on-failure" : {
+         "vipVariableName" : "system_admin_tech_on_failure",
+         "vipObjectType" : "object",
+         "vipValue" : "true",
+         "vipType" : "ignore"
+      },
+      "usb-controller" : {
+         "vipValue" : "false",
+         "vipType" : "ignore",
+         "vipObjectType" : "object",
+         "vipVariableName" : "system_usb_controller"
+      },
+      "idle-timeout" : {
+         "vipVariableName" : "system_idle-timeout",
+         "vipType" : "ignore",
+         "vipObjectType" : "object"
+      },
+      "route-consistency-check" : {
+         "vipVariableName" : "system_route_consistency_check",
+         "vipValue" : "false",
+         "vipType" : "ignore",
+         "vipObjectType" : "object"
+      },
+      "device-groups" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "list",
+         "vipVariableName" : "system_device_groups"
+      },
+      "description" : {
+         "vipVariableName" : "system_description",
+         "vipType" : "ignore",
+         "vipObjectType" : "object"
+      },
+      "system-tunnel-mtu" : {
+         "vipVariableName" : "system_system_tunnel_mtu",
+         "vipObjectType" : "object",
+         "vipValue" : 1024,
+         "vipType" : "ignore"
+      },
+      "host-name" : {
+         "vipObjectType" : "object",
+         "vipValue" : "",
+         "vipType" : "variableName",
+         "vipVariableName" : "system_host_name"
+      },
+      "multicast-buffer-percent" : {
+         "vipObjectType" : "object",
+         "vipValue" : 20,
+         "vipType" : "ignore",
+         "vipVariableName" : "system_multicast_buffer_percent"
+      },
+      "overlay-id" : {
+         "vipVariableName" : "system_overlay_id",
+         "vipObjectType" : "object",
+         "vipType" : "ignore",
+         "vipValue" : 1
+      },
+      "location" : {
+         "vipVariableName" : "system_location",
+         "vipObjectType" : "object",
+         "vipType" : "ignore"
+      },
+      "site-id" : {
+         "vipType" : "variableName",
+         "vipValue" : "",
+         "vipObjectType" : "object",
+         "vipVariableName" : "system_site_id"
+      },
+      "gps-location" : {
+         "latitude" : {
+            "vipObjectType" : "object",
+            "vipValue" : "",
+            "vipType" : "variableName",
+            "vipVariableName" : "system_latitude"
+         },
+         "longitude" : {
+            "vipObjectType" : "object",
+            "vipType" : "variableName",
+            "vipValue" : "",
+            "vipVariableName" : "system_longitude"
+         }
+      },
+      "allow-same-site-tunnels" : {
+         "vipVariableName" : "system_allow_same_site_tunnels",
+         "vipValue" : "false",
+         "vipType" : "ignore",
+         "vipObjectType" : "object"
+      },
+      "port-hop" : {
+         "vipType" : "ignore",
+         "vipValue" : "true",
+         "vipObjectType" : "object",
+         "vipVariableName" : "system_port_hop"
+      },
+      "max-omp-sessions" : {
+         "vipVariableName" : "system_max_omp_sessions",
+         "vipType" : "ignore",
+         "vipObjectType" : "object"
+      },
+      "controller-group-list" : {
+         "vipType" : "ignore",
+         "vipObjectType" : "list",
+         "vipVariableName" : "system_controller_group_list"
+      }
+   }
+}

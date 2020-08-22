@@ -1,0 +1,74 @@
+{
+  "templateId": "390710f4-1198-4559-9b73-c0fe307e63fa",
+  "templateName": "Site_vEdge_Template",
+  "templateDescription": "Site_vEdge_Template",
+  "deviceType": "vedge-cloud",
+  "configType": "template",
+  "factoryDefault": false,
+  "policyId": "",
+  "featureTemplateUidRange": [],
+  "connectionPreferenceRequired": true,
+  "connectionPreference": true,
+  "generalTemplates": [
+    {
+      "templateId": "b7e42bb4-d4bd-4e8b-9079-dc488c575ae7",
+      "templateType": "aaa"
+    },
+    {
+      "templateId": "17eb6a86-050d-4c83-b99f-e7acd8997a65",
+      "templateType": "bfd-vedge"
+    },
+    {
+      "templateId": "9c95ae95-c4be-4535-a315-22501456076b",
+      "templateType": "omp-vedge"
+    },
+    {
+      "templateId": "3ec2abe8-8295-4948-a68d-26e37618a651",
+      "templateType": "security-vedge"
+    },
+    {
+      "templateId": "2b2b1498-3a3d-4803-817b-9c6c6bd2d227",
+      "templateType": "system-vedge",
+      "subTemplates": [
+        {
+          "templateId": "355c4d34-2c07-4561-a494-2120762f6cba",
+          "templateType": "logging"
+        }
+      ]
+    },
+    {
+      "templateId": "5fc63222-9883-4b1e-bfc8-9e89471fe7e1",
+      "templateType": "vpn-vedge",
+      "subTemplates": [
+        {
+          "templateId": "af0b46a9-eceb-4eac-af31-426a55cd8788",
+          "templateType": "vpn-vedge-interface"
+        },
+        {
+          "templateId": "3f75e09b-66b6-401c-a730-f9ee19a94f32",
+          "templateType": "vpn-vedge-interface"
+        }
+      ]
+    },
+    {
+      "templateId": "8a9cdfa9-ec75-44fc-a118-d35431de52ba",
+      "templateType": "vpn-vedge",
+      "subTemplates": [
+        {
+          "templateId": "8c129446-7058-48dd-a277-3c659276373e",
+          "templateType": "vpn-vedge-interface"
+        }
+      ]
+    },
+    {
+      "templateId": "92c6b33c-374c-47b6-9a77-b446d305b154",
+      "templateType": "vpn-vedge",
+      "subTemplates": [
+        {
+          "templateId": "b1ff73e6-b075-4ddd-ab8b-d5d8106db3ef",
+          "templateType": "vpn-vedge-interface"
+        }
+      ]
+    }
+  ]
+}

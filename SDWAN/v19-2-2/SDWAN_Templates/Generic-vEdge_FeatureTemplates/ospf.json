@@ -1,0 +1,122 @@
+{
+   "factoryDefault" : false,
+   "templateDefinition" : {
+      "ospf" : {
+         "distance" : {
+            "inter-area" : {
+               "vipValue" : 110,
+               "vipObjectType" : "object",
+               "vipVariableName" : "ospf_distance_inter_area",
+               "vipType" : "ignore"
+            },
+            "intra-area" : {
+               "vipType" : "ignore",
+               "vipVariableName" : "ospf_distance_intra_area",
+               "vipObjectType" : "object",
+               "vipValue" : 110
+            },
+            "external" : {
+               "vipObjectType" : "object",
+               "vipVariableName" : "ospf_distance_external",
+               "vipValue" : 110,
+               "vipType" : "ignore"
+            }
+         },
+         "timers" : {
+            "spf" : {
+               "max-hold" : {
+                  "vipValue" : 10000,
+                  "vipVariableName" : "ospf_max_hold",
+                  "vipObjectType" : "object",
+                  "vipType" : "ignore"
+               },
+               "initial-hold" : {
+                  "vipValue" : 1000,
+                  "vipVariableName" : "ospf_initial_hold",
+                  "vipObjectType" : "object",
+                  "vipType" : "ignore"
+               },
+               "delay" : {
+                  "vipObjectType" : "object",
+                  "vipVariableName" : "ospf_delay",
+                  "vipValue" : 200,
+                  "vipType" : "ignore"
+               }
+            }
+         },
+         "auto-cost" : {
+            "reference-bandwidth" : {
+               "vipValue" : 100,
+               "vipVariableName" : "ospf_reference_bandwidth",
+               "vipObjectType" : "object",
+               "vipType" : "ignore"
+            }
+         },
+         "redistribute" : {
+            "vipObjectType" : "tree",
+            "vipValue" : [
+               {
+                  "route-policy" : {
+                     "vipType" : "ignore",
+                     "vipObjectType" : "object",
+                     "vipVariableName" : "ospf_redistribute_route_policy"
+                  },
+                  "priority-order" : [
+                     "protocol",
+                     "route-policy"
+                  ],
+                  "protocol" : {
+                     "vipObjectType" : "object",
+                     "vipVariableName" : "ospf_redistribute_protocol",
+                     "vipValue" : "omp",
+                     "vipType" : "constant"
+                  }
+               }
+            ],
+            "vipPrimaryKey" : [
+               "protocol"
+            ],
+            "vipType" : "constant"
+         },
+         "compatible" : {
+            "rfc1583" : {
+               "vipType" : "ignore",
+               "vipValue" : "true",
+               "vipObjectType" : "object",
+               "vipVariableName" : "ospf_rfc1583"
+            }
+         },
+         "max-metric" : {
+            "router-lsa" : {
+               "vipObjectType" : "tree",
+               "vipValue" : [],
+               "vipPrimaryKey" : [
+                  "ad-type"
+               ],
+               "vipType" : "ignore"
+            }
+         },
+         "default-information" : {
+            "originate" : {
+               "vipType" : "constant",
+               "vipObjectType" : "node-only",
+               "vipValue" : "true"
+            }
+         },
+         "router-id" : {
+            "vipVariableName" : "ospf_router_id",
+            "vipObjectType" : "object",
+            "vipType" : "ignore"
+         }
+      }
+   },
+   "templateDescription" : "Branch OSPF",
+   "configType" : "xml",
+   "templateMinVersion" : "15.0.0",
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "feature" : "vmanage-default",
+   "templateType" : "ospf",
+   "templateName" : "Branch_OSPF"
+}

@@ -1,0 +1,102 @@
+{
+   "factoryDefault" : false,
+   "templateMinVersion" : "15.0.0",
+   "templateName" : "NTP",
+   "templateDefinition" : {
+      "server" : {
+         "vipPrimaryKey" : [
+            "name"
+         ],
+         "vipValue" : [
+            {
+               "version" : {
+                  "vipObjectType" : "object",
+                  "vipType" : "ignore",
+                  "vipValue" : 4,
+                  "vipVariableName" : "ntp_server_version"
+               },
+               "prefer" : {
+                  "vipVariableName" : "ntp_server_prefer",
+                  "vipType" : "ignore",
+                  "vipObjectType" : "object",
+                  "vipValue" : "false"
+               },
+               "priority-order" : [
+                  "name",
+                  "key",
+                  "vpn",
+                  "version",
+                  "source-interface",
+                  "prefer"
+               ],
+               "vpn" : {
+                  "vipValue" : 0,
+                  "vipType" : "ignore",
+                  "vipObjectType" : "object",
+                  "vipVariableName" : "ntp_server_vpn"
+               },
+               "key" : {
+                  "vipVariableName" : "ntp_server_server_auth_key",
+                  "vipType" : "ignore",
+                  "vipObjectType" : "object"
+               },
+               "name" : {
+                  "vipType" : "variableName",
+                  "vipObjectType" : "object",
+                  "vipValue" : "",
+                  "vipVariableName" : "ntp_server_host"
+               },
+               "source-interface" : {
+                  "vipObjectType" : "object",
+                  "vipType" : "ignore",
+                  "vipVariableName" : "ntp_server_source_interface"
+               }
+            }
+         ],
+         "vipType" : "constant",
+         "vipObjectType" : "tree"
+      },
+      "keys" : {
+         "trusted" : {
+            "vipType" : "ignore",
+            "vipObjectType" : "list",
+            "vipVariableName" : "trusted_key"
+         },
+         "authentication" : {
+            "vipType" : "constant",
+            "vipObjectType" : "tree",
+            "vipValue" : [
+               {
+                  "number" : {
+                     "vipVariableName" : "ntp_auth_auth_key",
+                     "vipType" : "variableName",
+                     "vipObjectType" : "object",
+                     "vipValue" : ""
+                  },
+                  "md5" : {
+                     "vipVariableName" : "ntp_auth_md5",
+                     "vipType" : "variableName",
+                     "vipObjectType" : "object",
+                     "vipValue" : ""
+                  },
+                  "priority-order" : [
+                     "number",
+                     "md5"
+                  ]
+               }
+            ],
+            "vipPrimaryKey" : [
+               "number"
+            ]
+         }
+      }
+   },
+   "templateType" : "ntp",
+   "devicesAttached" : 0,
+   "templateDescription" : "NTP",
+   "createdBy" : "admin",
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "configType" : "xml"
+}

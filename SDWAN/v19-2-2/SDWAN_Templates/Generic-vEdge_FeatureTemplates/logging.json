@@ -1,0 +1,81 @@
+{
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "templateDescription" : "Logging",
+   "templateName" : "Logging",
+   "configType" : "xml",
+   "templateDefinition" : {
+      "disk" : {
+         "file" : {
+            "rotate" : {
+               "vipObjectType" : "object",
+               "vipVariableName" : "logging_disk_rotation",
+               "vipType" : "ignore",
+               "vipValue" : 10
+            },
+            "size" : {
+               "vipType" : "ignore",
+               "vipValue" : 10,
+               "vipObjectType" : "object",
+               "vipVariableName" : "logging_max_file_size"
+            }
+         },
+         "priority" : {
+            "vipValue" : "information",
+            "vipType" : "ignore",
+            "vipVariableName" : "logging_disk_priority",
+            "vipObjectType" : "object"
+         },
+         "enable" : {
+            "vipValue" : "true",
+            "vipType" : "ignore",
+            "vipVariableName" : "logging_disk_enable",
+            "vipObjectType" : "object"
+         }
+      },
+      "server" : {
+         "vipType" : "constant",
+         "vipValue" : [
+            {
+               "priority-order" : [
+                  "name",
+                  "vpn",
+                  "source-interface",
+                  "priority"
+               ],
+               "vpn" : {
+                  "vipObjectType" : "object",
+                  "vipVariableName" : "logging_server_vpn",
+                  "vipType" : "ignore",
+                  "vipValue" : 0
+               },
+               "name" : {
+                  "vipVariableName" : "logging_server_name",
+                  "vipObjectType" : "object",
+                  "vipValue" : "",
+                  "vipType" : "variableName"
+               },
+               "priority" : {
+                  "vipVariableName" : "logging_server_server_priority",
+                  "vipObjectType" : "object",
+                  "vipValue" : "information",
+                  "vipType" : "ignore"
+               },
+               "source-interface" : {
+                  "vipVariableName" : "logging_server_source_interface",
+                  "vipObjectType" : "object",
+                  "vipType" : "ignore"
+               }
+            }
+         ],
+         "vipObjectType" : "tree",
+         "vipPrimaryKey" : [
+            "name"
+         ]
+      }
+   },
+   "templateType" : "logging",
+   "templateMinVersion" : "15.0.0",
+    "factoryDefault" : false
+}

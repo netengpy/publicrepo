@@ -1,0 +1,530 @@
+{
+  "templateType": "ospf",
+  "deviceType": [
+    "vedge-CSR-1000v"
+  ],
+  "templateMinVersion": "15.0.0",
+  "lastUpdatedBy": "admin",
+  "editedTemplateDefinition": {
+    "ospf": {
+      "router-id": {
+        "vipObjectType": "object",
+        "vipType": "ignore",
+        "vipVariableName": "ospf_router_id"
+      },
+      "auto-cost": {
+        "reference-bandwidth": {
+          "vipObjectType": "object",
+          "vipType": "ignore",
+          "vipValue": 100,
+          "vipVariableName": "ospf_reference_bandwidth"
+        }
+      },
+      "compatible": {
+        "rfc1583": {
+          "vipObjectType": "object",
+          "vipType": "ignore",
+          "vipValue": "true",
+          "vipVariableName": "ospf_rfc1583"
+        }
+      },
+      "distance": {
+        "external": {
+          "vipObjectType": "object",
+          "vipType": "ignore",
+          "vipValue": 110,
+          "vipVariableName": "ospf_distance_external"
+        },
+        "inter-area": {
+          "vipObjectType": "object",
+          "vipType": "ignore",
+          "vipValue": 110,
+          "vipVariableName": "ospf_distance_inter_area"
+        },
+        "intra-area": {
+          "vipObjectType": "object",
+          "vipType": "ignore",
+          "vipValue": 110,
+          "vipVariableName": "ospf_distance_intra_area"
+        }
+      },
+      "timers": {
+        "spf": {
+          "delay": {
+            "vipObjectType": "object",
+            "vipType": "ignore",
+            "vipValue": 200,
+            "vipVariableName": "ospf_delay"
+          },
+          "initial-hold": {
+            "vipObjectType": "object",
+            "vipType": "ignore",
+            "vipValue": 1000,
+            "vipVariableName": "ospf_initial_hold"
+          },
+          "max-hold": {
+            "vipObjectType": "object",
+            "vipType": "ignore",
+            "vipValue": 10000,
+            "vipVariableName": "ospf_max_hold"
+          }
+        }
+      },
+      "redistribute": {
+        "vipType": "constant",
+        "vipValue": [
+          {
+            "protocol": {
+              "vipObjectType": "object",
+              "vipType": "constant",
+              "vipValue": "omp",
+              "vipVariableName": "ospf_redistribute_protocol"
+            },
+            "route-policy": {
+              "vipObjectType": "object",
+              "vipType": "ignore",
+              "vipVariableName": "ospf_redistribute_route_policy"
+            },
+            "priority-order": [
+              "protocol",
+              "route-policy"
+            ]
+          }
+        ],
+        "vipObjectType": "tree",
+        "vipPrimaryKey": [
+          "protocol"
+        ]
+      },
+      "max-metric": {
+        "router-lsa": {
+          "vipType": "ignore",
+          "vipValue": [],
+          "vipObjectType": "tree",
+          "vipPrimaryKey": [
+            "ad-type"
+          ]
+        }
+      },
+      "area": {
+        "vipType": "constant",
+        "vipValue": [
+          {
+            "a-num": {
+              "originalDefaultOption": "constant",
+              "dataPath": [],
+              "vipObjectType": "object",
+              "vipType": "constant",
+              "vipValue": 0,
+              "vipVariableName": "ospf_area_a_num"
+            },
+            "stub": {
+              "no-summary": {
+                "vipType": "ignore",
+                "vipObjectType": "node-only"
+              }
+            },
+            "nssa": {
+              "no-summary": {
+                "vipType": "ignore",
+                "vipObjectType": "node-only"
+              },
+              "translate": {
+                "vipType": "ignore",
+                "vipObjectType": "object"
+              }
+            },
+            "interface": {
+              "vipType": "constant",
+              "vipValue": [
+                {
+                  "authentication": {
+                    "message-digest": {
+                      "message-digest-key": {
+                        "vipObjectType": "object",
+                        "vipType": "ignore",
+                        "vipValue": "",
+                        "vipVariableName": "ospf_message_digest_key"
+                      },
+                      "md5": {
+                        "vipObjectType": "object",
+                        "vipType": "ignore",
+                        "vipValue": "",
+                        "vipVariableName": "ospf_md5"
+                      }
+                    },
+                    "type": {
+                      "vipObjectType": "object",
+                      "vipType": "ignore",
+                      "vipValue": "_empty",
+                      "vipVariableName": "ospf_authentication_type"
+                    },
+                    "authentication-key": {
+                      "vipObjectType": "object",
+                      "vipType": "ignore",
+                      "vipValue": "",
+                      "vipVariableName": "ospf_authentication_key"
+                    }
+                  },
+                  "name": {
+                    "originalDefaultOption": "constant",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "constant",
+                    "vipValue": "GigabitEthernet3",
+                    "vipVariableName": "ospf_name"
+                  },
+                  "hello-interval": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipValue": 10,
+                    "vipVariableName": "ospf_hello_interval"
+                  },
+                  "dead-interval": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipValue": 40,
+                    "vipVariableName": "ospf_dead_interval"
+                  },
+                  "retransmit-interval": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipValue": 5,
+                    "vipVariableName": "ospf_retransmit_interval"
+                  },
+                  "cost": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipVariableName": "ospf_cost"
+                  },
+                  "priority": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipValue": 1,
+                    "vipVariableName": "ospf_priority"
+                  },
+                  "network": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipValue": "broadcast",
+                    "vipVariableName": "ospf_network"
+                  },
+                  "passive-interface": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "node-only",
+                    "vipType": "ignore",
+                    "vipValue": "false",
+                    "vipVariableName": "ospf_passive_interface"
+                  },
+                  "priority-order": [
+                    "name",
+                    "hello-interval",
+                    "dead-interval",
+                    "retransmit-interval",
+                    "cost",
+                    "priority",
+                    "network",
+                    "passive-interface",
+                    "authentication"
+                  ]
+                }
+              ],
+              "vipObjectType": "tree",
+              "vipPrimaryKey": [
+                "name"
+              ]
+            },
+            "priority-order": [
+              "a-num",
+              "interface"
+            ]
+          }
+        ],
+        "vipObjectType": "tree",
+        "vipPrimaryKey": [
+          "a-num"
+        ]
+      }
+    }
+  },
+  "templateDefinition": {
+    "ospf": {
+      "router-id": {
+        "vipObjectType": "object",
+        "vipType": "ignore",
+        "vipVariableName": "ospf_router_id"
+      },
+      "auto-cost": {
+        "reference-bandwidth": {
+          "vipObjectType": "object",
+          "vipType": "ignore",
+          "vipValue": 100,
+          "vipVariableName": "ospf_reference_bandwidth"
+        }
+      },
+      "compatible": {
+        "rfc1583": {
+          "vipObjectType": "object",
+          "vipType": "ignore",
+          "vipValue": "true",
+          "vipVariableName": "ospf_rfc1583"
+        }
+      },
+      "distance": {
+        "external": {
+          "vipObjectType": "object",
+          "vipType": "ignore",
+          "vipValue": 110,
+          "vipVariableName": "ospf_distance_external"
+        },
+        "inter-area": {
+          "vipObjectType": "object",
+          "vipType": "ignore",
+          "vipValue": 110,
+          "vipVariableName": "ospf_distance_inter_area"
+        },
+        "intra-area": {
+          "vipObjectType": "object",
+          "vipType": "ignore",
+          "vipValue": 110,
+          "vipVariableName": "ospf_distance_intra_area"
+        }
+      },
+      "timers": {
+        "spf": {
+          "delay": {
+            "vipObjectType": "object",
+            "vipType": "ignore",
+            "vipValue": 200,
+            "vipVariableName": "ospf_delay"
+          },
+          "initial-hold": {
+            "vipObjectType": "object",
+            "vipType": "ignore",
+            "vipValue": 1000,
+            "vipVariableName": "ospf_initial_hold"
+          },
+          "max-hold": {
+            "vipObjectType": "object",
+            "vipType": "ignore",
+            "vipValue": 10000,
+            "vipVariableName": "ospf_max_hold"
+          }
+        }
+      },
+      "redistribute": {
+        "vipType": "constant",
+        "vipValue": [
+          {
+            "protocol": {
+              "vipObjectType": "object",
+              "vipType": "constant",
+              "vipValue": "omp",
+              "vipVariableName": "ospf_redistribute_protocol"
+            },
+            "route-policy": {
+              "vipObjectType": "object",
+              "vipType": "ignore",
+              "vipVariableName": "ospf_redistribute_route_policy"
+            },
+            "priority-order": [
+              "protocol",
+              "route-policy"
+            ]
+          }
+        ],
+        "vipObjectType": "tree",
+        "vipPrimaryKey": [
+          "protocol"
+        ]
+      },
+      "max-metric": {
+        "router-lsa": {
+          "vipType": "ignore",
+          "vipValue": [],
+          "vipObjectType": "tree",
+          "vipPrimaryKey": [
+            "ad-type"
+          ]
+        }
+      },
+      "area": {
+        "vipType": "constant",
+        "vipValue": [
+          {
+            "a-num": {
+              "originalDefaultOption": "constant",
+              "dataPath": [],
+              "vipObjectType": "object",
+              "vipType": "constant",
+              "vipValue": 0,
+              "vipVariableName": "ospf_area_a_num"
+            },
+            "stub": {
+              "no-summary": {
+                "vipType": "ignore",
+                "vipObjectType": "node-only"
+              }
+            },
+            "nssa": {
+              "no-summary": {
+                "vipType": "ignore",
+                "vipObjectType": "node-only"
+              },
+              "translate": {
+                "vipType": "ignore",
+                "vipObjectType": "object"
+              }
+            },
+            "interface": {
+              "vipType": "constant",
+              "vipValue": [
+                {
+                  "authentication": {
+                    "message-digest": {
+                      "message-digest-key": {
+                        "vipObjectType": "object",
+                        "vipType": "ignore",
+                        "vipValue": "",
+                        "vipVariableName": "ospf_message_digest_key"
+                      },
+                      "md5": {
+                        "vipObjectType": "object",
+                        "vipType": "ignore",
+                        "vipValue": "",
+                        "vipVariableName": "ospf_md5"
+                      }
+                    },
+                    "type": {
+                      "vipObjectType": "object",
+                      "vipType": "ignore",
+                      "vipValue": "_empty",
+                      "vipVariableName": "ospf_authentication_type"
+                    },
+                    "authentication-key": {
+                      "vipObjectType": "object",
+                      "vipType": "ignore",
+                      "vipValue": "",
+                      "vipVariableName": "ospf_authentication_key"
+                    }
+                  },
+                  "name": {
+                    "originalDefaultOption": "constant",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "constant",
+                    "vipValue": "GigabitEthernet3",
+                    "vipVariableName": "ospf_name"
+                  },
+                  "hello-interval": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipValue": 10,
+                    "vipVariableName": "ospf_hello_interval"
+                  },
+                  "dead-interval": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipValue": 40,
+                    "vipVariableName": "ospf_dead_interval"
+                  },
+                  "retransmit-interval": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipValue": 5,
+                    "vipVariableName": "ospf_retransmit_interval"
+                  },
+                  "cost": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipVariableName": "ospf_cost"
+                  },
+                  "priority": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipValue": 1,
+                    "vipVariableName": "ospf_priority"
+                  },
+                  "network": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "object",
+                    "vipType": "ignore",
+                    "vipValue": "broadcast",
+                    "vipVariableName": "ospf_network"
+                  },
+                  "passive-interface": {
+                    "originalDefaultOption": "ignore",
+                    "dataPath": [],
+                    "vipObjectType": "node-only",
+                    "vipType": "ignore",
+                    "vipValue": "false",
+                    "vipVariableName": "ospf_passive_interface"
+                  },
+                  "priority-order": [
+                    "name",
+                    "hello-interval",
+                    "dead-interval",
+                    "retransmit-interval",
+                    "cost",
+                    "priority",
+                    "network",
+                    "passive-interface",
+                    "authentication"
+                  ]
+                }
+              ],
+              "vipObjectType": "tree",
+              "vipPrimaryKey": [
+                "name"
+              ]
+            },
+            "priority-order": [
+              "a-num",
+              "interface"
+            ]
+          }
+        ],
+        "vipObjectType": "tree",
+        "vipPrimaryKey": [
+          "a-num"
+        ]
+      }
+    }
+  },
+  "templateId": "297f7a7c-6bd1-47c3-974d-c6adab93b6be",
+  "attachedMastersCount": 1,
+  "configType": "xml",
+  "createdOn": 1588969669314,
+  "@rid": 196,
+  "feature": "vmanage-default",
+  "factoryDefault": false,
+  "templateName": "DC_cEdge_OSPF_Template",
+  "createdBy": "admin",
+  "devicesAttached": 1,
+  "templateDescription": "DC_cEdge_OSPF_Template",
+  "lastUpdatedOn": 1588969669314
+}

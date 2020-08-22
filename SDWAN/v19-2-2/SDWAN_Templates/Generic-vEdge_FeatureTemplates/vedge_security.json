@@ -1,0 +1,36 @@
+   {
+   "templateDescription" : "Security",
+   "factoryDefault" : false,
+   "templateDefinition" : {
+      "ipsec" : {
+         "authentication-type" : {
+            "vipVariableName" : "security_authenticationType",
+            "vipType" : "constant",
+            "vipValue" : [
+               "sha1-hmac",
+               "ah-sha1-hmac"
+            ],
+            "vipObjectType" : "list"
+         },
+         "rekey" : {
+            "vipObjectType" : "object",
+            "vipType" : "ignore",
+            "vipValue" : 86400,
+            "vipVariableName" : "security_rekey"
+         },
+         "replay-window" : {
+            "vipVariableName" : "security_replay_window",
+            "vipObjectType" : "object",
+            "vipType" : "ignore",
+            "vipValue" : "512"
+         }
+      }
+   },
+   "deviceType" : [
+      "vedge-cloud"
+   ],
+   "configType" : "xml",
+   "templateMinVersion" : "15.0.0",
+   "templateType" : "security-vedge",
+   "templateName" : "Security"
+}

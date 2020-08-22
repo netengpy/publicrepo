@@ -1,0 +1,36 @@
+
+    {
+   "templateMinVersion" : "15.0.0",
+   "templateType" : "bfd-vedge",
+   "feature" : "vmanage-default",
+   "templateDescription" : "BFD",
+   "factoryDefault" : false,
+   "templateDefinition" : {
+      "app-route" : {
+         "multiplier" : {
+            "vipType" : "ignore",
+            "vipVariableName" : "bfd_multiplier",
+            "vipValue" : 6,
+            "vipObjectType" : "object"
+         },
+         "poll-interval" : {
+            "vipVariableName" : "bfd_poll_interval",
+            "vipValue" : 5000,
+            "vipType" : "constant",
+            "vipObjectType" : "object"
+         }
+      },
+      "color" : {
+         "vipType" : "ignore",
+         "vipPrimaryKey" : [
+            "color"
+         ],
+         "vipValue" : [],
+         "vipObjectType" : "tree"
+      }
+   },
+   "templateName" : "BFD",
+   "deviceType" : [
+      "vedge-cloud"
+   ]
+}
