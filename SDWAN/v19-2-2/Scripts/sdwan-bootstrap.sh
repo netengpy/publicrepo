@@ -53,7 +53,8 @@ printf "\e[1;33m-[INFO]- Created sdwan-certs/ folder in current working folder. 
 echo 
 
 printf "\e[1;33m-[INFO]- Generated RSA root-ca.key \e[0m\n"
-openssl rand -out /home/eve/.rnd -hex 256
+user=`whoami`
+openssl rand -out /home/$user/.rnd -hex 256
 openssl genrsa -out root-ca.key 2048
 echo
 printf "\e[1;33m-[INFO]- Generating root-ca.crt with root-ca.key \e[0m\n"
