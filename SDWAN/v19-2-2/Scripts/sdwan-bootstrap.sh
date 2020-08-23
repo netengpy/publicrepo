@@ -1,6 +1,55 @@
 #!/bin/bash
+# Run on a Linux management host that will also act as a CA server.
+# Initial pre-config required on the device for connectivity in VPN 512.
+# Author: omz
+# Date 21-08-2020
 
-mkdir certs && cd certs
+echo
+printf "\e[1;33m
+This script will walk through all the steps required to bring up
+Control Plane for Viptela SD-WAN. Make sure vManage, vBond and vSmart
+have connectivity in Management VPN 512. vEdge must have connectivity
+to the controllers in Transport VPN 0.\e[0m\n"
+echo
+read -p "Press Enter key to continue or crtl+c to exit ..."
+echo
+read -p "Enter vManage IP Address: " vmanage_ip
+read -p "Enter vBond IP Address: " vbond_ip
+read -p "Enter vSmart IP Address: " vsmart_ip
+
+printf "\e[1;33m-[INFO]-Pinging vManage, vBond and vSmart for connectivity...\e[0m\n"
+if ping -c 1 $vmanage_ip &> /dev/null
+then
+  printf "\e[1;32m[$vmanage_ip] vManage Reachable\e[0m\n"
+else
+  printf "\e[1;31m[$vmanage_ip] vManage Unreachable. Fix connection before continuing...\e[0m\n"
+  printf "\e[1;31mHave you done the cli pre-config?\e[0m\n"
+  echo
+  exit 1
+fi
+if ping -c 1 $vbond_ip &> /dev/null
+then
+  printf "\e[1;32m[$vbond_ip] vBond Reachable\e[0m\n"
+else
+  printf "\e[1;31m[$vbond_ip] vBond Unreachable. Fix connection before continuing...\e[0m\n"
+  printf "\e[1;31mHave you done the cli pre-config?\e[0m\n"
+  echo
+  exit 1
+fi
+if ping -c 1 $vsmart_ip &> /dev/null
+then
+  printf "\e[1;32m[$vsmart_ip] vSmart Reachable\e[0m\n"
+else
+  printf "\e[1;31m[$vsmart_ip] vSmart Unreachable. Fix connection before continuing...\e[0m\n"
+  printf "\e[1;31mHave you done the cli pre-config?\e[0m\n"
+  echo
+  exit 1
+fi
+read -p "Press Enter key to continue or crtl+c to exit ..."
+echo
+mkdir sdwan-certs && cd sdwan-certs
+echo
+printf "\e[1;33m-[INFO]- Created sdwan-certs/ folder in current working folder. \e[0m\n"
 echo 
 
 printf "\e[1;33m-[INFO]- Generated RSA root-ca.key \e[0m\n"
@@ -11,41 +60,43 @@ printf "\e[1;33m-[INFO]- Generating root-ca.crt with root-ca.key \e[0m\n"
 echo
 printf "\e[1;31mIMPORTANT: Organization MUST match the Cisco Smart Account Organization\e[0m\n"
 echo
-echo "Example: openssl req -x509 -new -nodes -key root-ca.key -sha256 -days 1024 -subj "/C=UK/ST=LON/L=LON/O=mystacktracecom/CN=mystacktracecom/OU=SDWAN-LAB" -out root-ca.crt"
 echo
 echo "C=UK ST=LON L=LON O=mystacktracecom OU=SDWAN-LAB CN=mystacktracecom"
 echo
 openssl req -x509 -new -nodes -key root-ca.key -sha256 -days 1024 -out root-ca.crt
 echo
-echo "Root Certificate generated."
-echo "Press Enter key to continue or crtl+c to exit ..."
-read
+printf "\e[1;33mRoot Certificate generated.\e[0m\n"
+echo 
+read -p "Press Enter key to continue or crtl+c to exit ..."
 echo
 printf "\e[1;33m-[INFO]- Created Root Certificate \e[0m\n"
 openssl x509 -in root-ca.crt -text
 echo
+ssh-keygen -f "/home/eve/.ssh/known_hosts" -R "$vmanage_ip"
+ssh-keygen -f "/home/eve/.ssh/known_hosts" -R "$vbond_ip"
+ssh-keygen -f "/home/eve/.ssh/known_hosts" -R "$vsmart_ip"
 
 printf "\e[1;33m-[INFO]- SCP Root Cert to vBond and vSmart \e[0m\n"
-scp root-ca.crt admin@192.168.1.2:/home/admin/
-scp root-ca.crt admin@192.168.1.3:/home/admin/
+scp root-ca.crt admin@$vbond_ip:/home/admin/
 echo
 printf "\e[1;33mEnter below command on vBond to install Root Cert. \e[0m\n"
 echo "request root-cert-chain install /home/admin/root-ca.crt"
 echo
 echo "Press Enter key to continue or crtl+c to exit ..."
 read
-
-printf "\e[1;33mEnter below command vSmart to install Root Cert. \e[0m\n"
+scp root-ca.crt admin@$vsmart_ip:/home/admin/
+echo
+printf "\e[1;33mEnter below command on vSmart to install Root Cert. \e[0m\n"
 echo "request root-cert-chain install /home/admin/root-ca.crt"
 echo
 echo "Press Enter key to continue or crtl+c to exit ..."
 read 
-
+cat root-ca.crt
 printf "\e[1;33m********************************************************
 Go to vManage - Administration → Settings
 Enter values for Organization Name and vBond IP address
 Change Controller Certificate Authorization to Enterprise Root certificate
-and Import and Save the root-ca.crt. root-ca.crt was printed above.
+and Import and Save the root-ca.crt printed above.
 ********************************************************\e[0m\n"
 printf "\e[1;31mIMPORTANT: Organization MUST match the Cisco Smart Account Organization\e[0m\n"
 echo
@@ -66,20 +117,21 @@ Password: admin
 Generate CSR: Check\e[0m\n"
 
 echo 
-echo "Press Enter key to continue or crtl+c to exit ..."
-read
+echo 
+read -p "Press Enter key to continue or crtl+c to exit ..."
+echo
 printf "\e[1;33mGenerate vManage CSR
 Configuration → Certificates → Controllers → Generate CSR and close
 (Click on the 3 dots in vManage row)\e[0m\n"
 echo 
-echo "Press Enter key to continue or crtl+c to exit ..."
-read
+echo 
+read -p "Press Enter key to continue or crtl+c to exit ..."
 echo 
 printf "\e[1;33m-[INFO]- SCP CSRs from vManage, vBond and vSmart\e[0m\n"
 echo
-scp admin@192.168.1.1:/home/admin/vmanage_csr .
-scp admin@192.168.1.2:/home/admin/vbond_csr .
-scp admin@192.168.1.3:/home/admin/vsmart_csr .
+scp admin@$vmanage_ip:/home/admin/vmanage_csr .
+scp admin@$vbond_ip:/home/admin/vbond_csr .
+scp admin@$vsmart_ip:/home/admin/vsmart_csr .
 echo
 ls -al | grep _csr
 echo 
@@ -187,6 +239,7 @@ read
 echo
 echo "All Done!"
 echo "Go to vManage Main Dashboard."
+echo
 echo "Some Helpful Show Commands ..."
 printf "\e[1;33m
 show certificate root-ca-cert
@@ -194,15 +247,3 @@ show control connections
 show control connections-history
 show control local-properties
 \e[0m\n"
-
-
-
-
-
-
-
-
-
-
-
-
