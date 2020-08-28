@@ -1,0 +1,432 @@
+Configure LAN and WAN routers
+===
+LAN
+===
+en
+conf t
+host LAN
+int e0/0
+ip add 192.168.1.254 255.255.255.0
+no sh
+int e0/1
+ip add 192.168.10.254 255.255.255.0
+no sh
+ip dhcp exc 192.168.10.254
+ip dhcp pool Ubuntu
+network 192.168.10.0 /24
+default 192.168.10.254
+do wr
+
+===
+WAN
+===
+en
+conf t
+host WAN
+int e0/0
+no sh
+ip add 10.1.1.254 255.255.255.0
+int e0/1
+ip add 172.16.1.254 255.255.255.0
+no sh
+int e0/2
+ip add 172.16.2.254 255.255.255.0
+no sh
+do wr
+
+
+VPN ID 0 - Transport VPN (VPN 0)
+VPN ID 512 - Management VPN (VPN 512) for out-of-band management traffic
+
+=======
+vManage
+=======
+conf t
+
+vpn 512
+interface eth0
+ ip address 192.168.1.1/24
+ no shutdown
+!
+ip route 0.0.0.0/0 192.168.1.254
+commit
+exit
+
+system
+ system-ip 1.1.1.1
+ site-id 1000
+ organization-name mystacktrace
+ vbond 10.1.1.2
+ !
+ vpn 0 int eth1
+ ip add 10.1.1.1/24
+ no shut
+ exit
+! 
+ip route 0.0.0.0/0 10.1.1.254
+!
+commit and-quit
+
+
+
+======
+vBond
+======
+conf t
+
+system
+ host-name vBond
+ system-ip 1.1.1.2
+ site-id 1000
+ organization-name mystacktrace
+ vbond 10.1.1.2 local vbond-only
+ !
+ vpn 512 int eth0
+ ip add 192.168.1.2/24
+ no shut
+ exit
+!
+ ip route 0.0.0.0/0 192.168.1.254
+
+interface ge0/0
+ vpn 0 int ge0/0
+ no tunnel-interface
+ ip add 10.1.1.2/24
+ no shut 
+ exit
+!
+ ip route 0.0.0.0/0 10.1.1.254
+!
+commit and-quit
+
+
+
+======
+vSmart
+======
+conf t
+
+system
+ system-ip 1.1.1.3
+ site-id 1000
+ organization-name mystacktrace
+ vbond 10.1.1.2
+ !
+ vpn 512 int eth0
+ ip add 192.168.1.3/24
+ no shut
+ exit
+!
+ ip route 0.0.0.0/0 192.168.1.254
+!
+ vpn 0 int eth1
+ no int eth0
+ ip add 10.1.1.3/24
+ no shut
+ exit
+!
+ ip route 0.0.0.0/0 10.1.1.254
+!
+commit and-quit
+
+
+
+=======
+vEdge01
+=======
+conf t
+
+system
+ host-name vEdge01
+ system-ip 2.1.1.1
+ site-id 1
+ organization-name mystacktrace
+ vbond 10.1.1.2
+ vpn 0 int ge0/0
+ ip add 172.16.1.1/24
+ no shutdown
+ exit
+!
+ ip route 0.0.0.0/0 172.16.1.254
+! 
+commit and-quit
+
+
+
+=======
+vEdge02
+=======
+conf t
+
+system
+ host-name vEdge02
+ system-ip 3.1.1.1
+ site-id 2
+ organization-name mystacktrace
+ vbond 10.1.1.2
+ vpn 0 int ge0/0
+ ip add 172.16.2.1/24
+ no shutdown
+ exit
+!
+ ip route 0.0.0.0/0 172.16.2.254
+!
+commit and-quit
+
+
+
+========= INSTALL CERTIFICATES =========
+
+A CSR Certificate Signing Request file is a file created as a signing request for a digital certificate. It contains an encrypted block of text that identifies the applicant of the certificate and includes encrypted data for country, state, organization, domain, email address, and public key.
+
+*.CER or *.CRT  -  Base64-encoded or DER-encoded binary X.509 Certificate
+Storage of a single certificate.  This format does not support storage of private keys.
+
+
+1. sdwan-lab-root-ca.key on vmanage
+2. sdwan-lab-root-ca.pem from sdwan-lab-root-ca.key
+3. Install .pem on vmanage
+4. Generate vmanage_csr on vmanage
+5. Create vmanage_crt from vmanage_csr 
+6. Cat vmanage_crt and Install Certificate on vManage
+
+
++ Generate RSA sdwan-lab-root-ca.key
+
+vmanage# vshell
+vmanage:~$ openssl genrsa -out sdwan-lab-root-ca.key 2048
+
++ Create sdwan-lab-root-ca.pem with sdwan-lab-root-ca.key
+
+openssl req -x509 -new -nodes -key sdwan-lab-root-ca.key -sha256 -days 1024 -subj "/C=UK/ST=LON/L=LON/O=mystacktrace /CN=vmanage.lab" -out sdwan-lab-root-ca.pem
+
++ Install sdwan-lab-root-ca.pem
+
+exit
+vmanage# request root-cert-chain install /home/admin/sdwan-lab-root-ca.pem
+
+
+===========
+vManage GUI
+===========
+
+Configuration → Certificates → Controllers → vManage → Click on 3 bars → Generate CSR
+
+====================
+Go to vManage vshell
+====================
+
+vshell
+
+openssl x509 -req -in vmanage_csr -CA sdwan-lab-root-ca.pem -CAkey sdwan-lab-root-ca.key -CAcreateserial -out vmanage_crt -days 500 -sha256
+
++ Copy content vmanage.crt file by using “cat vmanage_crt” then install certificate on vManage
+
+cat vmanage_crt
+
+Configuration → Certificates → Controllers → Install Certificate → Paste vmanage.crt
+
+
+
+======
+vBond
+======
+
+1. Install sdwan-lab-root-ca.pem from vManage that was created earlier
+2. Add vBond to vManage
+3. scp vbond_csr
+4. Create .crt from .csr 
+5. Cat .crt and Install Certificate on vManage
+6. Send to vBond
+
+vBond# request root-cert-chain install scp://admin@192.168.1.1:/home/admin/sdwan-lab-root-ca.pem vpn 512
+
+******
+If above fails then copy/paste the sdwan-lab-root-ca.pem on vmsart manaully.
+vshell
+vi sdwan-lab-root-ca.pem
+press i and paste sdwan-lab-root-ca.pem from vManage.
+press esc and type :wq to exit the vi editor.
+exit
+Then run the abvoe command again to install the cert.
+******
+
++ Add vBond to vManage
+Configuration → Certificates → Controllers → Add Controller
+
+vBond Mgmt IP: 10.1.1.2
+Username: admin
+Password: admin
+
+
+====================
+Go to vManage vshell
+====================
+
+vshell
+
+scp admin@10.1.1.2:/home/admin/vbond_csr .
+
+openssl x509 -req -in vbond_csr -CA sdwan-lab-root-ca.pem -CAkey sdwan-lab-root-ca.key -CAcreateserial -out vbond_crt -days 500 -sha256
+
+
++ Copy content vbond_crt file by using "cat vbond_crt" then install certificate on vManage
+
+cat vmanage_crt
+
+Configuration → Certificates → Controllers → Install Certificate → Paste vbond_crt
+
++ Send certificate to vBond
+
+Configuration → Certificates → Controllers → Send to vBond
+
+
+======
+vSmart
+======
+
+1. Install sdwan-lab-root-ca.pem from vManage that was created earlier
+2. Add vSmart to vManage
+3. scp vsmart_csr
+4. Create vsmart_crt from vsmart_csr 
+5. Cat vsmart_crt and Install Certificate on vManage
+6. Send to vBond
+
+vsmart# request root-cert-chain install scp://admin@192.168.1.1:/home/admin/sdwan-lab-root-ca.pem vpn 512
+
+******
+If above fails then copy/paste the sdwan-lab-root-ca.pem on vmsart manaully.
+vshell
+vi sdwan-lab-root-ca.pem
+press i and paste sdwan-lab-root-ca.pem from vManage.
+press esc and type :wq to exit the vi editor.
+exit
+Then run the abvoe command again to install the cert.
+******
+
+Configuration → Devices → Controllers → Add Controller → vSmart
+
+vSmart Mgmt IP: 10.1.1.3
+Username: admin
+Password: admin
+
+Protocol: DTLS
+Generate CSR: Check
+
+====================
+Go to vManage vshell
+====================
+
+scp admin@10.1.1.3:/home/admin/vsmart_csr .
+
+openssl x509 -req -in vsmart_csr -CA sdwan-lab-root-ca.pem -CAkey sdwan-lab-root-ca.key -CAcreateserial -out vsmart_crt -days 500 -sha256
+
+cat vsmart_crt
+
+Configuration → Certificates → Controllers → Install Certificate → Paste vsmart_crt
+
++ Send certificate to vBond
+
+Configuration → Certificates → Controllers → Send to vBond
+
+
+======
+vEdge
+======
+
+1. Copy and Install sdwan-lab-root-ca.pem from vManage that was created earlier
+2. Create vedge01_csr 
+3. View and copy vEdge CSR
+4. Copy/paste csr in vManage cli and create vedge01_csr
+5. Create crt from csr 
+6. Cat crt and Install Certificate on vManage
+7. Install certificate
+
++ On vManage using “cat sdwan-lab-root-ca.pem” to see contents then create sdwan-lab-root-ca.pem file on vEdge with same contents.
+
+vshell
+vi sdwan-lab-root-ca.pem
+paste sdwan-lab-root-ca.pem from vManage
+
++ Install sdwan-lab-root-ca.pem on vEdge with command:
+
+vedge# request root-cert-chain install /home/admin/sdwan-lab-root-ca.pem
+
++ Create vedge01_csr file on vEdge
+request csr upload /home/admin/vedge01_csr
+
+Uploading CSR via VPN 0
+Enter organization-unit name : mystacktrace
+Re-enter organization-unit name : mystacktrace
+
+vshell
+
++ Use “cat vedge01_csr” to copy contents from vEdge and create vedge01_csr file on vManage.
+
+====================
+Go to vManage vshell
+====================
+
+vi vedge01_csr
+copy / paste from vEdge
+
++ Create vedge01_crt with command below
+
+openssl x509 -req -in vedge01_csr -CA sdwan-lab-root-ca.pem -CAkey sdwan-lab-root-ca.key -CAcreateserial -out vedge01_crt -days 500 -sha256
+
+cat vedge01_crt
+
+============
+Go to vEdge01
+============
+
+vshell
+vi vedge01_crt
+
+vedge# request certificate install /home/admin/vedge01_crt 
+
+vedge# show certificate serial
+
+
++ Create text file with below on Ubuntu:
+368755e1-cfc9-4dbe-984e-9a8d7e3f41f9,BB36DBCE6DF33852
+
+
+============
+Go to vManage
+============
+Devices → vEdge List → Upload vEdge
+
+
++ Send vedge list to controller
+Configuration → Certificates → vEdge List → Send to Controllers
+
+
++ Validate vEdges
+Configuration → Certificates → vEdge List → (vEdge) → Valid 
+
+Configuration → Certificates → vEdge List → Send to Controllers
+
+
+========================
+Final Task - Config tunnel
+Go to vManage and vSmart
+========================
+
+vpn 0
+interface eth1
+tunnel-interface
+
+======
+vBond
+======
+
+vpn 0
+interface ge0/0
+tunnel-interface encapsulation ipsec
+
+
+========================
+show control connections
+show control connections-history
+
