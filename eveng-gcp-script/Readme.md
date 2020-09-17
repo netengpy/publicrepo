@@ -21,7 +21,8 @@ Paste the below into the cloud shell terminal:
 
 Say `yes` if asked to enable API on project
 
-* Click burger menu on the top left and select `Compute Engine` 
+* Click burger menu on the top left and select `Compute Engine > VM Instances`
+* Or search for 'vm instances' in the serach field at the top of the dashboard 
 * Select the project if asked
 * Click `Create`
 
@@ -42,17 +43,22 @@ Zone = `Choose location closest or cheaper for you`
 * Click Create
 
 #### Create Firewall rules
+* Search for 'firewall' in the serach field at the top of the dashboard
 - Step 1: Navigation menu/VPC Network/Firewall rules
 - Step 2: Create new firewall rule
 - Step 3: Create an ingress FW rule; allow TCP ports 0-65335
 - Step 4: Create an egress FW rule; allow TCP ports 0-65535
 
 #### Create GCP bucket
+* Search for 'storage' in the serach field at the top of the dashboard
 * Create a GCP bucket and upload the IOL images and script to generate the license key
 * Important note - name the bucket whatever you want BUT the folder containing the images must be named 'images'. Else the eveng-init-setup.sh script will fail. Modify the paths in script if needed.
 
 * Navigate back to `Compute Engine > VM Instances`
-* Click on `SSH` 
+* Click on `SSH`
+```
+sudo -i
+```
 * Install Eve-NG `wget -O - http://www.eve-ng.net/repo/install-eve.sh | bash -i`
 > After install completes, reboot the VM. Reconnect - ctrl+c and enter sudo -i
 > Set root password, hostname, DHCP, Internet connection direct.
